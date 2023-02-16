@@ -35,6 +35,8 @@ defineEmits(['downArrowClick']);
       </div>
     </div>
 
+    <div class="titleWrapper" />
+
     <div
       class="arrowDown"
       @click="$emit('downArrowClick')"
@@ -56,13 +58,22 @@ defineEmits(['downArrowClick']);
   background-size: 100%;
 }
 
+.titleWrapper {
+  background-color: var(--color-background-beige);
+  width: 100vw;
+  height: 25vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
 .coverTitle {
   display: flex;
   justify-content: space-around;
-
+  z-index: 20;
   position: absolute;
   width: 100vw;
-  bottom: 18%;
+  bottom: calc(25vh - 90px);
 }
 
 .name {
@@ -80,8 +91,9 @@ defineEmits(['downArrowClick']);
 }
 
 .arrowDown {
+  z-index: 20;
   position: absolute;
-  bottom: 48px;
+  bottom: 65px;
   margin: 0 auto;
   left: 0;
   right: 0;
