@@ -26,7 +26,6 @@ onMounted(() => {
 });
 
 const swipeDown = () => {
-  console.log(swiperContainer);
   swiperContainer.value.swiper.slideNext();
 };
 
@@ -45,9 +44,11 @@ const swipeDown = () => {
     <swiper-slide class="swiperSlide">
       <AppCover @down-arrow-click="swipeDown" />
     </swiper-slide>
+
     <swiper-slide class="swiperSlide">
       <SaveTheDate />
     </swiper-slide>
+
     <swiper-slide class="swiperSlide">
       <ParkInyoung />
     </swiper-slide>
