@@ -1,16 +1,18 @@
 <script setup>
 import flower from '@/assets/images/flower.svg';
 import arrowDown from '@/assets/icons/arrowDown.svg';
-
-// const arrowClick = () => {
-//   console.log('arrow clicked');
-// };
+// import CurvedText from '../common/CurvedText.vue';
 
 defineEmits(['downArrowClick']);
 </script>
 
 <template>
   <div id="appCover">
+    <!-- <CurvedText
+      id="gettingMarried"
+      text="We're getting married!"
+    /> -->
+
     <div class="coverTitle">
       <div class="name">
         <div class="nameLatin">
@@ -84,6 +86,14 @@ defineEmits(['downArrowClick']);
   padding: 0px;
   gap: 7px;
   color: var(--color-text-green);
+}
+
+.name:first-child {
+  margin-left: 20px;
+}
+
+.name:last-child {
+  margin-right: 20px;
 }
 
 .nameLatin {
