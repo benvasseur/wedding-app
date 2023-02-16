@@ -6,7 +6,7 @@
   <div id="saveTheDate">
     Save the date
   </div>
-</template> 
+</template>
 
 <style scoped>
 #saveTheDate {

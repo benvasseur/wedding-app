@@ -1,11 +1,14 @@
 /* eslint-env node */
 module.exports = {
   root: true,
-  'extends': [
+  extends: [
     'plugin:vue/vue3-recommended',
-    'eslint:recommended'
+    '@vue/eslint-config-airbnb',
   ],
   parserOptions: {
-    ecmaVersion: 'latest'
-  }
-}
+    ecmaVersion: 'latest',
+  },
+  rules: {
+    'import/no-unresolved': 'off',
+  },
+};

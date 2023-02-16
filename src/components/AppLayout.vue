@@ -1,38 +1,42 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+import { register } from 'swiper/element/bundle';
 import AppCover from './pageItem/AppCover.vue';
 import SaveTheDate from './pageItem/SaveTheDate.vue';
 import ParkInyoung from './pageItem/ParkInyoung.vue';
 
-import { register } from 'swiper/element/bundle';
-import { reactive } from 'vue';
 register();
 
-const creativeEffect = reactive({
-  prev: {
-    shadow: true,
-    translate: [0, '-20%', -1]
-  },
-  next: {
-    translate: [0, '100%', 0]
-  }
+const swiperContainer = ref(null);
+
+onMounted(() => {
+  Object.assign(swiperContainer.value, {
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, '-20%', -1],
+      },
+      next: {
+        translate: [0, '100%', 0],
+      },
+    },
+  });
+
+  swiperContainer.value.initialize();
 });
+
 </script>
 
 <template>
   <swiper-container
+    ref="swiperContainer"
     class="swiperContainer"
     :pagination="false"
     direction="vertical"
     :mousewheel="true"
-  >
-    <!-- <swiper-container
-    class="swiperContainer"
-    :pagination="false"
-    direction="vertical"
-    :mousewheel="true"
+    :init="false"
     effect="creative"
-    :creative-effect="creativeEffect"
-  > -->
+  >
     <swiper-slide class="swiperSlide">
       <AppCover />
     </swiper-slide>

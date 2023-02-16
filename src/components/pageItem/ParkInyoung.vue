@@ -6,7 +6,7 @@
   <div id="parkInyoung">
     Park Inyoung
   </div>
-</template> 
+</template>
 
 <style scoped>
 #parkInyoung {

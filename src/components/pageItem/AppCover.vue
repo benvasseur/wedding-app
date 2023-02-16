@@ -6,7 +6,7 @@
   <div id="appCover">
     App cover
   </div>
-</template> 
+</template>
 
 <style scoped>
 #appCover {
