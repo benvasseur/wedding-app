@@ -10,5 +10,6 @@ module.exports = {
   },
   rules: {
     'import/no-unresolved': 'off',
+    'vuejs-accessibility/click-events-have-key-events': 'off',
   },
 };

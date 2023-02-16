@@ -25,6 +25,11 @@ onMounted(() => {
   swiperContainer.value.initialize();
 });
 
+const swipeDown = () => {
+  console.log(swiperContainer);
+  swiperContainer.value.swiper.slideNext();
+};
+
 </script>
 
 <template>
@@ -38,7 +43,7 @@ onMounted(() => {
     effect="creative"
   >
     <swiper-slide class="swiperSlide">
-      <AppCover />
+      <AppCover @down-arrow-click="swipeDown" />
     </swiper-slide>
     <swiper-slide class="swiperSlide">
       <SaveTheDate />
