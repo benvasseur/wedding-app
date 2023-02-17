@@ -51,13 +51,13 @@ const galleryRef = ref(null);
 
   .galleryText {
     position: absolute;
-    top: 15.89%;
+    top: 15%;
     width: 100vw;
   }
 
   .gallery {
     position: absolute;
-    top: 30%;
+    top: 25%;
     width: 100vw;
     height: 50vh;
   }
