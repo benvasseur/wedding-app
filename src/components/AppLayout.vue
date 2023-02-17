@@ -5,11 +5,11 @@ import AppCover from './pageItem/AppCover.vue';
 import SaveTheDate from './pageItem/SaveTheDate.vue';
 import ParkInyoung from './pageItem/ParkInyoung.vue';
 import LeeSuhyun from './pageItem/LeeSuhyun.vue';
-import Invitation from './pageItem/Invitation.vue';
+import Invitation from './pageItem/InvitationPage.vue';
 
-import Location from './pageItem/Location.vue';
-import Gallery from './pageItem/Gallery.vue';
-import Account from './pageItem/Account.vue';
+import Location from './pageItem/LocationPage.vue';
+import Gallery from './pageItem/GalleryPage.vue';
+import Account from './pageItem/AccountPage.vue';
 import Share from './pageItem/Share.vue';
 
 register();
