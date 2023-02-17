@@ -53,7 +53,8 @@ defineEmits(['downArrowClick']);
   width: 100%;
   text-align: center;
 
-  background-image: url('@/assets/images/coverImage.png');
+  /* background-image: url('@/assets/images/coverImage.png'); */
+  background-image: url('@/assets/images/coverImage2.jpeg');
   background-color: var(--color-background-beige);
   background-repeat: no-repeat;
   background-size: 100%;
