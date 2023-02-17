@@ -1,11 +1,12 @@
 <script setup>
+import saveTheDate from '@/assets/texts/saveTheDate.svg';
 
 </script>
 
 <template>
   <div id="saveTheDatePage">
     <div class="saveTheDate">
-      Save the date
+      <img :src="saveTheDate" alt="date" />
     </div>
 
     <div class="date">

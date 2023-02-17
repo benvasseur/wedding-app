@@ -1,17 +1,16 @@
 <script setup>
 import flower from '@/assets/images/flower.svg';
 import arrowDown from '@/assets/icons/arrowDown.svg';
-// import CurvedText from '../common/CurvedText.vue';
+import gettingMarried from '@/assets/texts/gettingMarried.svg';
 
 defineEmits(['downArrowClick']);
 </script>
 
 <template>
   <div id="appCover">
-    <!-- <CurvedText
-      id="gettingMarried"
-      text="We're getting married!"
-    /> -->
+    <div class="gettingMarriedText">
+      <img :src="gettingMarried" alt="married" />
+    </div>
 
     <div class="coverTitle">
       <div class="name">
@@ -58,6 +57,12 @@ defineEmits(['downArrowClick']);
   background-color: var(--color-background-beige);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.gettingMarriedText {
+  position: absolute;
+  width: 100vw;
+  bottom: calc(25vh + 32px);
 }
 
 .titleWrapper {
