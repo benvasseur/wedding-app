@@ -1,28 +1,28 @@
 <script setup>
-import bride from '@/assets/texts/bride.svg';
+import groom from '@/assets/texts/groom.svg';
 </script>
 
 <template>
-  <div id="bride">
+  <div id="groom">
     <div class="portrait" />
 
-    <div class="brideText">
-      <img :src="bride" alt="bride" />
+    <div class="groomText">
+      <img :src="groom" alt="groom" />
     </div>
 
     <div class="name">
-      Park<br>Inyoung
+      Lee<br>Suhyun
     </div>
 
     <div class="description">
-      <p>박인영</p>
-      <p>박순남 김윤희의 딸</p>
+      <p>이수현</p>
+      <p>이성화 정신숙의 아들</p>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-#bride {
+#groom {
   height: 100%;
   width: 100%;
   background: var(--color-background-green);
@@ -38,7 +38,7 @@ import bride from '@/assets/texts/bride.svg';
     top: 150px;
   }
 
-  .brideText {
+  .groomText {
     top: 100px;
   }
 

@@ -1,6 +1,6 @@
 <script setup>
 import flower from '@/assets/images/flower.svg';
-import arrowDown from '@/assets/icons/arrowDown.svg';
+import arrowDown from '@/assets/images/arrowDown.svg';
 import gettingMarried from '@/assets/texts/gettingMarried.svg';
 
 defineEmits(['downArrowClick']);
