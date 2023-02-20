@@ -1,13 +1,87 @@
 <script setup>
+import { loadFull } from 'tsparticles';
 import flower from '@/assets/images/flower.svg';
 import arrowDown from '@/assets/images/arrowDown.svg';
 import gettingMarried from '@/assets/texts/gettingMarried.svg';
 
 defineEmits(['downArrowClick']);
+
+const particlesInit = async (engine) => {
+  await loadFull(engine);
+};
+
+// const particleOptions = {
+//   background: {
+//     color: '#333',
+//   },
+//   particles: {
+//     move: {
+//       direction: 'bottom',
+//       enable: true,
+//       random: false,
+//       straight: false,
+//     },
+//     opacity: {
+//       value: { min: 0.1, max: 0.5 },
+//     },
+//     size: {
+//       value: { min: 1, max: 10 },
+//     },
+//     wobble: {
+//       distance: 20,
+//       enable: true,
+//       speed: {
+//         min: -5,
+//         max: 5,
+//       },
+//     },
+//   },
+// };
+
+const particleOptions = {
+  detectRetina: true,
+  fpsLimit: 120,
+  particles: {
+    color: {
+      value: ['#cc3399', '#660066', '#990099'],
+    },
+    move: {
+      direction: 'bottom-left',
+      enable: true,
+      random: false,
+      speed: 2,
+      straight: false,
+    },
+    number: {
+      density: {
+        enable: true,
+        area: 800,
+      },
+      value: 100,
+    },
+    opacity: {
+      value: 0.5,
+    },
+    shape: {
+      type: ['circle', 'triangle', 'star'],
+    },
+    size: {
+      random: true,
+      value: 10,
+    },
+  },
+
+};
 </script>
 
 <template>
   <div id="appCover">
+    <Particles
+      id="tsparticles"
+      :particles-init="particlesInit"
+      :options="particleOptions"
+    />
+
     <div class="gettingMarriedText">
       <img :src="gettingMarried" alt="married" />
     </div>
@@ -58,6 +132,10 @@ defineEmits(['downArrowClick']);
   background-color: var(--color-background-beige);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+#tsparticles {
+  z-index:30;
 }
 
 .gettingMarriedText {
