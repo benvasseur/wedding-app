@@ -36,8 +36,6 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
   background-size: cover;
 
   .saveTheDate {
-    color: var(--color-text-beige);
-    font-size: 25px;
     position: absolute;
     top: 16vh;
     width: 100vw;
@@ -45,20 +43,29 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
   }
 
   .date {
-    font-size: 120px;
-    font-weight: bold;
     position: absolute;
     width: 100vw;
     text-align: center;
     top: 35vh;
+
+    font-family: 'Abril Fatface';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 130px;
   }
 
   .subDate {
-    font-size: 40px;
     position: absolute;
     width: 100vw;
     text-align: center;
     top: calc(35vh + 120px);
+
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
   }
 
   .description {
@@ -66,6 +73,12 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
     width: 100vw;
     text-align: center;
     bottom: 15vh;
+
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
 
     p:first-child {
       margin-bottom: 15px;

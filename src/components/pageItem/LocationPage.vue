@@ -1,5 +1,25 @@
+<!-- eslint-disable no-undef -->
 <script setup>
+import { onMounted } from 'vue';
 import location from '@/assets/texts/location.svg';
+import subway from '@/assets/texts/subway.svg';
+
+onMounted(() => {
+  try {
+    console.log('mounted');
+    const map = new naver.maps.Map('map', {
+      center: new naver.maps.LatLng(37.505408, 127.028848),
+      zoom: 15,
+    });
+
+    const marker = new naver.maps.Marker({
+      position: new naver.maps.LatLng(37.505408, 127.028848),
+      map,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 </script>
 
@@ -10,17 +30,22 @@ import location from '@/assets/texts/location.svg';
     </div>
 
     <div class="description1">
-      <p>노보텔 앰배서더 서울 강남</p>
-      <p>서울 강남구 봉은사로 130</p>
+      <p class="title">
+        노보텔 앰배서더 서울 강남
+      </p>
+      <p class="subTitle">
+        서울 강남구 봉은사로 130
+      </p>
     </div>
 
-    <div class="map">
+    <div id="map" style="width:100%;height:240px;">
       MAP
     </div>
 
     <div class="description2">
-      <p>지하철</p>
-      <p>9호선 신논현역 4번 출구 도보 5분 9호선<br>언주역 8번출구 도보 10분</p>
+      <img :src="subway" alt="location" />
+      <p>9호선 신논현역 4번 출구 <span class="info">도보 5분</span></p>
+      <p>9호선 언주역 8번출구 <span class="info">도보 10분</span></p>
     </div>
   </div>
 </template>
@@ -32,7 +57,6 @@ import location from '@/assets/texts/location.svg';
   text-align: center;
 
   background-color: var(--color-background-green);
-  color: var(--color-text-beige);
 
   font-family: 'Noto Serif KR';
   font-style: normal;
@@ -51,12 +75,27 @@ import location from '@/assets/texts/location.svg';
     height: 32px;
     width: 100vw;
     top: 170px;
+
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 200%;
+
+    .title {
+      color: white;
+      font-weight: 600;
+    }
+
+    .subTitle {
+      font-weight: 400;
+      color: var(--color-text-beige);
+    }
   }
 
-  .map {
+  #map {
     position: absolute;
     width: 100vw;
-    height: 235px;
+    height: 240px;
     top: 259px;
 
     background: #D9D9D9;
@@ -68,6 +107,18 @@ import location from '@/assets/texts/location.svg';
     position: absolute;
     width: 100vw;
     top: 551px;
+    text-align: left;
+    margin-left: 25px;
+
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+
+    .info {
+      color: var(--color-text-beige);
+    }
   }
 }
 </style>

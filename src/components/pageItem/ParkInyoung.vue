@@ -14,9 +14,12 @@ import bride from '@/assets/texts/bride.svg';
       Park<br>Inyoung
     </div>
 
+    <div class="nameKo">
+      박인영
+    </div>
+
     <div class="description">
-      <p>박인영</p>
-      <p>박순남 김윤희의 딸</p>
+      박순남 김윤희의 딸
     </div>
   </div>
 </template>
@@ -46,7 +49,7 @@ import bride from '@/assets/texts/bride.svg';
     font-family: 'DM Serif Text';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 44px;
     line-height: 100%;
 
     position: absolute;
@@ -54,18 +57,30 @@ import bride from '@/assets/texts/bride.svg';
     top: calc(150px + 100vw - 25px);
   }
 
-  .description {
-    font-style: normal;
-    font-weight: 200;
-    font-size: 16px;
-    line-height: 23px;
+  .nameKo {
     width: 100vw;
     position: absolute;
     top: calc(150px + 100vw + 75px);
 
-    >p:last-of-type {
-      margin-top: 15px;
-    }
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .description {
+    width: 100vw;
+    position: absolute;
+    top: calc(150px + 100vw + 120px);
+
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: var(--color-text-beige);
   }
 }
 </style>

@@ -14,9 +14,12 @@ import groom from '@/assets/texts/groom.svg';
       Lee<br>Suhyun
     </div>
 
+    <div class="nameKo">
+      이수현
+    </div>
+
     <div class="description">
-      <p>이수현</p>
-      <p>이성화 정신숙의 아들</p>
+      이성화 정신숙의 아들
     </div>
   </div>
 </template>
@@ -31,7 +34,7 @@ import groom from '@/assets/texts/groom.svg';
     width: 100vw;
     height: 100vw;
 
-    background-image: url('@/assets/images/ParkInyoung.png');
+    background-image: url('@/assets/images/LeeSuhyun.png');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -46,7 +49,7 @@ import groom from '@/assets/texts/groom.svg';
     font-family: 'DM Serif Text';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 44px;
     line-height: 100%;
 
     position: absolute;
@@ -54,18 +57,30 @@ import groom from '@/assets/texts/groom.svg';
     top: calc(150px + 100vw - 25px);
   }
 
-  .description {
-    font-style: normal;
-    font-weight: 200;
-    font-size: 16px;
-    line-height: 23px;
+  .nameKo {
     width: 100vw;
     position: absolute;
     top: calc(150px + 100vw + 75px);
 
-    >p:last-of-type {
-      margin-top: 15px;
-    }
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .description {
+    width: 100vw;
+    position: absolute;
+    top: calc(150px + 100vw + 120px);
+
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: var(--color-text-beige);
   }
 }
 </style>

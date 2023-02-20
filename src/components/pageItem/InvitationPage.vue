@@ -15,10 +15,11 @@ import flowerInvitation from '@/assets/images/flowerInvitation.svg';
     </div>
 
     <div class="description">
-      새로운 마음과 새 의미를 간직하며
-      저희 두 사람이 새 출발의 첫 걸음을 내딛습니다.
-      좋은 꿈, 바른 뜻으로 올바르게 살 수 있도록
-      축복과 격려주시면
+      새로운 마음과 새 의미를 간직하며<br>
+      저희 두 사람이 새 출발의<br>
+      첫 걸음을 내딛습니다.<br>
+      좋은 꿈, 바른 뜻으로 올바르게 살 수 있도록<br>
+      축복과 격려주시면<br>
       더없는 기쁨으로 간직하겠습니다.
     </div>
   </div>
@@ -47,15 +48,13 @@ import flowerInvitation from '@/assets/images/flowerInvitation.svg';
 
   .description {
     position: absolute;
-    width: 332px;
-    height: 160px;
-    left: 23px;
     top: 440px;
+    width: 100vw;
 
     font-family: 'Noto Serif KR';
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 15px;
     line-height: 200%;
 
     text-align: center;
