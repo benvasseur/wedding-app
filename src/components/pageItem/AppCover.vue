@@ -10,34 +10,6 @@ const particlesInit = async (engine) => {
   await loadFull(engine);
 };
 
-// const particleOptions = {
-//   background: {
-//     color: '#333',
-//   },
-//   particles: {
-//     move: {
-//       direction: 'bottom',
-//       enable: true,
-//       random: false,
-//       straight: false,
-//     },
-//     opacity: {
-//       value: { min: 0.1, max: 0.5 },
-//     },
-//     size: {
-//       value: { min: 1, max: 10 },
-//     },
-//     wobble: {
-//       distance: 20,
-//       enable: true,
-//       speed: {
-//         min: -5,
-//         max: 5,
-//       },
-//     },
-//   },
-// };
-
 const particleOptions = {
   detectRetina: true,
   fpsLimit: 120,
@@ -89,10 +61,10 @@ const particleOptions = {
     <div class="coverTitle">
       <div class="name">
         <div class="nameLatin">
-          Inyoung
+          Suhyun
         </div>
         <div class="nameHangeul">
-          박인영
+          이수현
         </div>
       </div>
 
@@ -102,10 +74,10 @@ const particleOptions = {
 
       <div class="name">
         <div class="nameLatin">
-          Suhyun
+          Inyoung
         </div>
         <div class="nameHangeul">
-          이수현
+          박인영
         </div>
       </div>
     </div>
