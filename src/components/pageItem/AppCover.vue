@@ -38,7 +38,7 @@ const particleOptions = {
       image: [
         {
           src: petal1,
-          // if true and the image type is SVG, it will replace all the colors with the particle color
+          // if true and image type is SVG, it will replace all the colors with the particle color
           // replaceColor: false,
         },
         {
