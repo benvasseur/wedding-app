@@ -6,12 +6,12 @@ import subway from '@/assets/texts/subway.svg';
 
 onMounted(() => {
   try {
-    console.log('mounted');
     const map = new naver.maps.Map('map', {
       center: new naver.maps.LatLng(37.505408, 127.028848),
       zoom: 15,
     });
 
+    // eslint-disable-next-line no-unused-vars
     const marker = new naver.maps.Marker({
       position: new naver.maps.LatLng(37.505408, 127.028848),
       map,
