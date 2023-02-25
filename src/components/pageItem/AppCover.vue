@@ -1,6 +1,6 @@
 <script setup>
 import { loadFull } from 'tsparticles';
-import flower from '@/assets/images/flower.svg';
+import flower from '@/assets/images/flower.png';
 import arrowDown from '@/assets/images/arrowDown.svg';
 import gettingMarried from '@/assets/texts/gettingMarried.svg';
 
