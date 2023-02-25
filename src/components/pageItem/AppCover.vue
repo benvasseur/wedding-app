@@ -3,6 +3,11 @@ import { loadFull } from 'tsparticles';
 import flower from '@/assets/images/flower.png';
 import arrowDown from '@/assets/images/arrowDown.svg';
 import gettingMarried from '@/assets/texts/gettingMarried.svg';
+import petal1 from '@/assets/confetti/petal1.svg';
+import petal2 from '@/assets/confetti/petal2.svg';
+import petal3 from '@/assets/confetti/petal3.svg';
+import petal4 from '@/assets/confetti/petal4.svg';
+import petal5 from '@/assets/confetti/petal5.svg';
 
 defineEmits(['downArrowClick']);
 
@@ -14,9 +19,6 @@ const particleOptions = {
   detectRetina: true,
   fpsLimit: 120,
   particles: {
-    color: {
-      value: ['#cc3399', '#660066', '#990099'],
-    },
     move: {
       direction: 'bottom-left',
       enable: true,
@@ -31,11 +33,28 @@ const particleOptions = {
       },
       value: 100,
     },
-    opacity: {
-      value: 0.5,
-    },
     shape: {
-      type: ['circle', 'triangle', 'star'],
+      type: 'image',
+      image: [
+        {
+          src: petal1,
+        // if true and the image type is SVG, it will replace all the colors with the particle color
+        // replaceColor: false,
+        },
+        {
+          src: petal2,
+        },
+        {
+          src: petal3,
+        },
+        {
+          src: petal4,
+        },
+        {
+          src: petal5,
+        },
+      ],
+
     },
     size: {
       random: true,
