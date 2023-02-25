@@ -9,8 +9,7 @@ import Invitation from './pageItem/InvitationPage.vue';
 
 import Location from './pageItem/LocationPage.vue';
 import Gallery from './pageItem/GalleryPage.vue';
-import Account from './pageItem/AccountPage.vue';
-import Share from './pageItem/Share.vue';
+import Regards from './pageItem/RegardsPage.vue';
 
 register();
 
@@ -77,11 +76,7 @@ const swipeDown = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <Account />
-    </swiper-slide>
-
-    <swiper-slide class="swiperSlide">
-      <Share />
+      <Regards />
     </swiper-slide>
   </swiper-container>
 </template>
