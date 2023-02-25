@@ -4,6 +4,10 @@ import { onMounted } from 'vue';
 import location from '@/assets/texts/location.svg';
 import subway from '@/assets/texts/subway.svg';
 
+import naverMap from '@/assets/images/naverMap.png';
+import kakaoNav from '@/assets/images/kakaoNav.png';
+import tMap from '@/assets/images/tMap.png';
+
 onMounted(() => {
   try {
     const map = new naver.maps.Map('map', {
@@ -40,6 +44,23 @@ onMounted(() => {
 
     <div id="map" style="width:100%;height:240px;">
       MAP
+    </div>
+
+    <div class="navLinks">
+      <button type="button" class="roundButton">
+        <img :src="naverMap" alt="Naver Map">
+        네이버 지도
+      </button>
+
+      <button type="button" class="roundButton">
+        <img :src="kakaoNav" alt="Kakao Nav">
+        카카오 내비
+      </button>
+
+      <button type="button" class="roundButton">
+        <img :src="tMap" alt="TMap">
+        티맵
+      </button>
     </div>
 
     <div class="description2">
@@ -103,10 +124,40 @@ onMounted(() => {
     color: black;
   }
 
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    position: absolute;
+    top: 515px;
+    width: 322px;
+    left: calc(50vw - 322px/2 + 0.5px);
+
+    button {
+      border-width: 0px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+
+      font-family: 'Noto Sans KR';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: var(--color-text-green)
+    }
+  }
+
   .description2 {
     position: absolute;
     width: 100vw;
-    top: 551px;
+    top: 565px;
     text-align: left;
     margin-left: 25px;
 
