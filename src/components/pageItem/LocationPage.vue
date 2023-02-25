@@ -1,6 +1,7 @@
 <!-- eslint-disable no-undef -->
 <script setup>
 import { onMounted } from 'vue';
+import { VBtn } from 'vuetify/components/VBtn';
 import location from '@/assets/texts/location.svg';
 import subway from '@/assets/texts/subway.svg';
 
@@ -47,7 +48,13 @@ onMounted(() => {
     </div>
 
     <div class="navLinks">
-      <button type="button" class="roundButton">
+      <v-btn
+        rounded
+      >
+        네이버 지도
+      </v-btn>
+
+      <!-- <button type="button" class="roundButton">
         <img :src="naverMap" alt="Naver Map">
         네이버 지도
       </button>
@@ -60,7 +67,7 @@ onMounted(() => {
       <button type="button" class="roundButton">
         <img :src="tMap" alt="TMap">
         티맵
-      </button>
+      </button> -->
     </div>
 
     <div class="description2">
@@ -120,7 +127,7 @@ onMounted(() => {
     top: 259px;
 
     background: #D9D9D9;
-    padding-top: 90px;
+
     color: black;
   }
 
@@ -133,7 +140,7 @@ onMounted(() => {
     width: 322px;
     left: calc(50vw - 322px/2 + 0.5px);
 
-    button {
+    /* button {
       border-width: 0px;
       height: 36px;
       background: rgba(255, 255, 255, 0.8);
@@ -151,7 +158,7 @@ onMounted(() => {
       line-height: 20px;
       text-align: center;
       color: var(--color-text-green)
-    }
+    } */
   }
 
   .description2 {

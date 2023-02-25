@@ -14,7 +14,10 @@ export default defineConfig({
         },
       },
     }),
-    vuetify({ autoImport: true }),
+    vuetify({
+      autoImport: true,
+      styles: { configFile: 'src/assets/vuetify.scss' },
+    }),
   ],
   resolve: {
     alias: {

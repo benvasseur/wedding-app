@@ -48,6 +48,9 @@ const swipeDown = () => {
     effect="creative"
   >
     <swiper-slide class="swiperSlide">
+      <Location />
+    </swiper-slide>
+    <swiper-slide class="swiperSlide">
       <AppCover @down-arrow-click="swipeDown" />
     </swiper-slide>
 
