@@ -1,12 +1,9 @@
 <script setup>
 import regards from '@/assets/texts/regards.svg';
-import flower from '@/assets/images/flowerInvitation.svg';
+import rings from '@/assets/images/rings.png';
 import copy from '@/assets/images/contentCopy.svg';
-import kakaoPay from '@/assets/images/kakaoPay.png';
 import kakao from '@/assets/images/kakao.svg';
 import link from '@/assets/images/link.svg';
-
-import Accordion from '@/components/common/AccordionComponent.vue';
 
 const clickLinkCopy = () => {
   navigator.clipboard.writeText(window.location.origin);
@@ -24,35 +21,40 @@ const clickBankCopy = () => {
       <img :src="regards" alt="regards" />
     </div>
 
-    <div class="flower">
-      <img :src="flower" alt="flower" />
+    <div class="rings">
+      <img :src="rings" alt="rings" />
     </div>
 
-    <div class="description">
-      마음 전하실 곳
-    </div>
-
-    <div class="accordion item1">
-      <Accordion>
-        <template #accordion-trigger>
+    <v-expansion-panels class="accordion">
+      <v-expansion-panel>
+        <template #title>
           신랑측 계좌번호
         </template>
 
-        <template #accordion-content>
+        <template #text>
           <div class="accContent">
             <div class="blockLeft">
-              우리은행 | 1002-945-123-456 <br>
-              최수지
+              <div class="personInfo">
+                이성화 (신랑 아버지)
+              </div>
+              <div class="bankInfo">
+                n은행 0000-000-000000
+              </div>
             </div>
+
             <div class="blockRight">
-              <button
-                class="roundButton copyButton"
-                type="button"
+              <v-btn
+                rounded
+                class="copyButton"
+                width="74px"
+                max-width="74px"
                 @click="clickBankCopy"
               >
+                <template #prepend>
+                  <img :src="copy" alt="copy" />
+                </template>
                 복사
-                <img :src="copy" alt="copy" />
-              </button>
+              </v-btn>
             </div>
           </div>
 
@@ -60,43 +62,61 @@ const clickBankCopy = () => {
 
           <div class="accContent">
             <div class="blockLeft">
-              이수현 <br>
-              카카오페이
+              <div class="personInfo">
+                이수현 신랑
+              </div>
+              <div class="bankInfo">
+                n은행 0000-000-000000
+              </div>
             </div>
+
             <div class="blockRight">
-              <button
-                class="roundButton kakaoButton"
-                type="button"
+              <v-btn
+                rounded
+                class="copyButton"
+                width="74px"
+                max-width="74px"
+                @click="clickBankCopy"
               >
-                <img :src="kakaoPay" alt="kakao pay" />
-              </button>
+                <template #prepend>
+                  <img :src="copy" alt="copy" />
+                </template>
+                복사
+              </v-btn>
             </div>
           </div>
         </template>
-      </Accordion>
-    </div>
+      </v-expansion-panel>
 
-    <div class="accordion item2">
-      <Accordion>
-        <template #accordion-trigger>
+      <v-expansion-panel>
+        <template #title>
           신랑측 계좌번호
         </template>
 
-        <template #accordion-content>
+        <template #text>
           <div class="accContent">
             <div class="blockLeft">
-              우리은행 | 1002-945-123-456 <br>
-              최수지
+              <div class="personInfo">
+                이성화 (신랑 아버지)
+              </div>
+              <div class="bankInfo">
+                n은행 0000-000-000000
+              </div>
             </div>
+
             <div class="blockRight">
-              <button
-                class="roundButton copyButton"
-                type="button"
+              <v-btn
+                rounded
+                class="copyButton"
+                width="74px"
+                max-width="74px"
                 @click="clickBankCopy"
               >
+                <template #prepend>
+                  <img :src="copy" alt="copy" />
+                </template>
                 복사
-                <img :src="copy" alt="copy" />
-              </button>
+              </v-btn>
             </div>
           </div>
 
@@ -104,39 +124,55 @@ const clickBankCopy = () => {
 
           <div class="accContent">
             <div class="blockLeft">
-              이수현 <br>
-              카카오페이
+              <div class="personInfo">
+                이수현 신랑
+              </div>
+              <div class="bankInfo">
+                n은행 0000-000-000000
+              </div>
             </div>
+
             <div class="blockRight">
-              <button
-                class="roundButton kakaoButton"
-                type="button"
+              <v-btn
+                rounded
+                class="copyButton"
+                width="74px"
+                max-width="74px"
+                @click="clickBankCopy"
               >
-                <img :src="kakaoPay" alt="kakao pay" />
-              </button>
+                <template #prepend>
+                  <img :src="copy" alt="copy" />
+                </template>
+                복사
+              </v-btn>
             </div>
           </div>
         </template>
-      </Accordion>
-    </div>
+      </v-expansion-panel>
+    </v-expansion-panels>
 
     <div class="share">
-      <button
-        class="roundButton shareKakaoButton"
-        type="button"
-      >
-        <img :src="kakao" alt="kakao share" />
-        카카오톡 공유
-      </button>
-
-      <button
-        class="roundButton linkButton"
-        type="button"
+      <v-btn
+        rounded
+        flat
         @click="clickLinkCopy"
       >
-        <img :src="link" alt="link share" />
+        <template #prepend>
+          <img :src="kakao" alt="kakao share" />
+        </template>
+        카카오톡 공유
+      </v-btn>
+
+      <v-btn
+        rounded
+        flat
+        @click="clickLinkCopy"
+      >
+        <template #prepend>
+          <img :src="link" alt="link share" />
+        </template>
         링크 복사
-      </button>
+      </v-btn>
     </div>
 
     <div class="legal">
@@ -160,53 +196,58 @@ const clickBankCopy = () => {
     width: 100vw;
   }
 
-  .flower {
+  .rings {
     position: absolute;
     top: 239px;
     width: 100vw;
   }
 
-  .description {
-    position: absolute;
-    top: 420px;
-    width: 100vw;
-
-    font-family: 'Noto Serif KR';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 200%;
-  }
-
   .accordion {
     position: absolute;
-    width: 100vw;
-    padding: 0 20px;
-    color: var(--color-text-green);
-
-    &.item1 {
-      top: 500px;
-    }
-
-    &.item2 {
-      top: 570px;
-    }
+    top: 430px;
+    width: 90%;
+    margin-left: 5%;
 
     .accContent {
       display: flex;
       justify-content: space-between;
-      font-size: 14px;
 
       .blockLeft {
+        color: #64837D;
         font-family: 'Noto Sans';
         font-style: normal;
         font-weight: 400;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: left;
+
+        .personInfo {
+          font-weight: 600;
+        }
+
+        .bankInfo {
+          margin-top: 10px;
+        }
       }
 
       .blockRight {
-        width: 70px;
         margin-left: 10px;
+
+        button {
+          padding: 0;
+          font-family: 'Noto Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 200%;
+          color: #FFFFFF;
+
+          img {
+            position: relative;
+            top: -1px;
+            left: 4px;
+          }
+        }
       }
 
       .copyButton {
@@ -224,12 +265,6 @@ const clickBankCopy = () => {
           position: relative;
           top: 2px;
         }
-      }
-
-      .kakaoButton {
-        background: #FFEB00;
-        border: 0;
-        padding: 6px 10px;
       }
     }
 
@@ -251,10 +286,8 @@ const clickBankCopy = () => {
     left: calc(50vw - 125px);
 
     button {
-      border-width: 0;
       background: #F8F6F2;
       height: 40px;
-      padding: 4px 12px;
 
       font-family: 'Noto Sans KR';
       font-style: normal;
@@ -263,17 +296,13 @@ const clickBankCopy = () => {
       line-height: 200%;
       color: #64837D;
 
-      &.shareKakaoButton {
-        width: 135px;
+      padding: 0 12px 0 8px;
 
-        img {
-          position: relative;
-          top: 6px;
-        }
-      }
-
-      &.linkButton {
-        width: 107px;
+      img {
+        position: relative;
+        left: 4px;
+        width: 20px;
+        height: 20px;
       }
     }
   }

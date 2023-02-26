@@ -39,3 +39,38 @@ button.roundButton {
     padding: 0 2rem;
   }
 }
+
+/* Expansion panel */
+#regards .v-expansion-panel {
+  margin-bottom: 16px;
+
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+.v-expansion-panel-title {
+  width: 89%;
+  border-radius: 8px;
+}
+
+.v-expansion-panel-title__overlay,
+.v-expansion-panel-title--active>.v-expansion-panel-title__overlay,
+.v-expansion-panel-title--active:hover>.v-expansion-panel-title__overlay {
+  opacity: 0 !important;
+}
+
+.v-expansion-panel__shadow {
+  box-shadow: none;
+}
+
+.v-expansion-panel-text {
+  background-color: #F8F6F2;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+.v-expansion-panel--active>.v-expansion-panel-title {
+  min-height: 48px;
+}

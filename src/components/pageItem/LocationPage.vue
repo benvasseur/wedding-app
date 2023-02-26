@@ -1,7 +1,6 @@
 <!-- eslint-disable no-undef -->
 <script setup>
 import { onMounted } from 'vue';
-import { VBtn } from 'vuetify/components/VBtn';
 import location from '@/assets/texts/location.svg';
 import subway from '@/assets/texts/subway.svg';
 
@@ -67,7 +66,7 @@ onMounted(() => {
         rel="noopener noreferrer"
       >
         <template #prepend>
-          <img :src="naverMap" alt="Naver Map">
+          <img :src="kakaoNav" alt="Naver Map">
         </template>
         카카오 내비
       </v-btn>
