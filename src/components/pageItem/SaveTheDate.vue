@@ -34,19 +34,21 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
   background-color: var(--color-background-green);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
 
   .saveTheDate {
     position: absolute;
-    top: 16vh;
-    width: 100vw;
+    top: 120px;
+    width: 100%;
     text-align: center;
   }
 
   .date {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     text-align: center;
-    top: 35vh;
+    top: 35%;
 
     font-family: 'Abril Fatface';
     font-style: normal;
@@ -57,9 +59,9 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
 
   .subDate {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     text-align: center;
-    top: calc(35vh + 120px);
+    top: calc(35% + 120px);
 
     font-family: 'DM Serif Display';
     font-style: normal;
@@ -70,9 +72,9 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
 
   .description {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     text-align: center;
-    bottom: 15vh;
+    bottom: 15%;
 
     font-family: 'Noto Serif KR';
     font-style: normal;

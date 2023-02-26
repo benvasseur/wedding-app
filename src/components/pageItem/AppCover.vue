@@ -122,7 +122,6 @@ const particleOptions = {
   background-image: url('@/assets/images/coverImage3.jpeg');
   background-color: var(--color-background-beige);
   background-repeat: no-repeat;
-  /* background-position: center; */
   background-position-x: 45%;
   background-position-y: 70%;
   background-size: 260%;
@@ -133,10 +132,6 @@ const particleOptions = {
 }
 
 .gettingMarriedText {
-  /* position: absolute;
-  width: 100vw;
-  bottom: calc(25vh + 32px); */
-
   top: calc(70% - 55px);
 }
 
@@ -155,7 +150,6 @@ const particleOptions = {
   z-index: 20;
   position: absolute;
   width: 100%;
-  /* bottom: calc(25vh - 90px); */
   top: calc(70% - 15px);
 }
 
