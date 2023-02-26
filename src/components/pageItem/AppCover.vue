@@ -119,10 +119,13 @@ const particleOptions = {
   text-align: center;
 
   /* background-image: url('@/assets/images/coverImage.png'); */
-  background-image: url('@/assets/images/coverImage.png');
+  background-image: url('@/assets/images/coverImage3.jpeg');
   background-color: var(--color-background-beige);
   background-repeat: no-repeat;
-  background-size: 100%;
+  /* background-position: center; */
+  background-position-x: 45%;
+  background-position-y: 70%;
+  background-size: 260%;
 }
 
 #tsparticles {
@@ -130,15 +133,17 @@ const particleOptions = {
 }
 
 .gettingMarriedText {
-  position: absolute;
+  /* position: absolute;
   width: 100vw;
-  bottom: calc(25vh + 32px);
+  bottom: calc(25vh + 32px); */
+
+  top: calc(70% - 55px);
 }
 
 .titleWrapper {
   background-color: var(--color-background-beige);
-  width: 100vw;
-  height: 25vh;
+  width: 100%;
+  height: 30%;
   position: absolute;
   bottom: 0;
   z-index: 10;
@@ -149,8 +154,9 @@ const particleOptions = {
   justify-content: space-around;
   z-index: 20;
   position: absolute;
-  width: 100vw;
-  bottom: calc(25vh - 90px);
+  width: 100%;
+  /* bottom: calc(25vh - 90px); */
+  top: calc(70% - 15px);
 }
 
 .name {
@@ -178,7 +184,7 @@ const particleOptions = {
 .arrowDown {
   z-index: 20;
   position: absolute;
-  bottom: 65px;
+  bottom: 40px;
   margin: 0 auto;
   left: 0;
   right: 0;
