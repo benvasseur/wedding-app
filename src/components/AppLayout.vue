@@ -27,7 +27,7 @@ const state = reactive({
 // eslint-disable-next-line arrow-body-style
 const showNavigation = computed(() => {
   return state.activeSlide !== 1
-    // && state.activeSlide !== 0
+    && state.activeSlide !== 0
     && state.activeSlide !== 6;
 });
 
