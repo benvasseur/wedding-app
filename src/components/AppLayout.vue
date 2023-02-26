@@ -24,9 +24,12 @@ const state = reactive({
   totalSlide: 0,
 });
 
-const showNavigation = computed(() => state.activeSlide !== 0
-&& state.activeSlide !== 1
-&& state.activeSlide !== 6);
+// eslint-disable-next-line arrow-body-style
+const showNavigation = computed(() => {
+  return state.activeSlide !== 1
+    // && state.activeSlide !== 0
+    && state.activeSlide !== 6;
+});
 
 onMounted(() => {
   Object.assign(swiperContainer.value, {
@@ -49,7 +52,15 @@ const swipeDown = () => {
 };
 
 const swipeToMap = () => {
-  swiperContainer.value.swiper.slideTo(5, 500);
+  const id = setInterval(() => {
+    if (state.activeSlide < 6) {
+      if (state.activeSlide === 5) clearInterval(id);
+      swiperContainer.value.swiper.slideNext(250);
+    } else {
+      if (state.activeSlide === 7) clearInterval(id);
+      swiperContainer.value.swiper.slidePrev(250);
+    }
+  }, 100);
 };
 
 const onInit = () => {
