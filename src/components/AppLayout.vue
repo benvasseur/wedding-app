@@ -1,19 +1,28 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import {
+  ref, reactive, onMounted,
+} from 'vue';
 import { register } from 'swiper/element/bundle';
+
 import AppCover from './pageItem/AppCover.vue';
 import SaveTheDate from './pageItem/SaveTheDate.vue';
 import ParkInyoung from './pageItem/ParkInyoung.vue';
 import LeeSuhyun from './pageItem/LeeSuhyun.vue';
 import Invitation from './pageItem/InvitationPage.vue';
-
 import Location from './pageItem/LocationPage.vue';
 import Gallery from './pageItem/GalleryPage.vue';
 import Regards from './pageItem/RegardsPage.vue';
 
+import location from '@/assets/images/location.svg';
+
 register();
 
 const swiperContainer = ref(null);
+
+const state = reactive({
+  activeSlide: 0,
+  totalSlide: 0,
+});
 
 onMounted(() => {
   Object.assign(swiperContainer.value, {
@@ -35,6 +44,17 @@ const swipeDown = () => {
   swiperContainer.value.swiper.slideNext();
 };
 
+const swipeToMap = () => {
+  swiperContainer.value.swiper.slideTo(5, 500);
+};
+
+const onInit = () => {
+  state.totalSlide = swiperContainer.value?.swiper.slides.length;
+};
+
+const onSlideChange = () => {
+  state.activeSlide = swiperContainer.value.swiper.activeIndex + 1;
+};
 </script>
 
 <template>
@@ -46,7 +66,27 @@ const swipeDown = () => {
     :mousewheel="true"
     :init="false"
     effect="creative"
+    @init="onInit"
+    @slidechange="onSlideChange"
   >
+    <div v-if="state.activeSlide !== 0 && state.activeSlide !== 5" class="navigation">
+      <div class="left">
+        {{ state.activeSlide }} / {{ state.totalSlide }}
+      </div>
+      <div class="right">
+        <v-btn
+          rounded
+          variant="outlined"
+          @click="swipeToMap"
+        >
+          <template #prepend>
+            <img :src="location" alt="location">
+          </template>
+          위치보기
+        </v-btn>
+      </div>
+    </div>
+
     <swiper-slide class="swiperSlide">
       <AppCover @down-arrow-click="swipeDown" />
     </swiper-slide>
@@ -81,7 +121,7 @@ const swipeDown = () => {
   </swiper-container>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .swiperContainer {
   width: 100%;
   height: 100%;
@@ -94,5 +134,28 @@ const swipeDown = () => {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navigation {
+  position: absolute;
+  z-index: 50;
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--color-text-beige);
+
+  .left {
+    margin-left: 12px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 200%;
+  }
 }
 </style>
