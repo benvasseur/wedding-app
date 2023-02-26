@@ -163,14 +163,14 @@ const onSlideChange = () => {
 
   color: var(--color-text-beige);
 
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 200%;
+
   .left {
     margin-left: 12px;
-
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 200%;
   }
 }
 </style>
