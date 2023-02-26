@@ -1,6 +1,6 @@
 <script setup>
 import invitation from '@/assets/texts/invitation.svg';
-import flowerInvitation from '@/assets/images/flowerInvitation.svg';
+import rings from '@/assets/images/rings.png';
 
 </script>
 
@@ -10,8 +10,8 @@ import flowerInvitation from '@/assets/images/flowerInvitation.svg';
       <img :src="invitation" alt="invitation" />
     </div>
 
-    <div class="flower">
-      <img :src="flowerInvitation" alt="flower" />
+    <div class="rings">
+      <img :src="rings" alt="rings" />
     </div>
 
     <div class="description">
@@ -36,20 +36,21 @@ import flowerInvitation from '@/assets/images/flowerInvitation.svg';
 
   .invitation {
     position: absolute;
-    top: 23.65%;
-    width: 100vw;
+    top: 120px;
+    width: 100%;
+    text-align: center;
   }
 
-  .flower {
+  .rings {
     position: absolute;
-    top: 239px;
-    width: 100vw;
+    top: 160px;
+    width: 100%;
   }
 
   .description {
     position: absolute;
-    top: 440px;
-    width: 100vw;
+    top: 375px;
+    width: 100%;
 
     font-family: 'Noto Serif KR';
     font-style: normal;
