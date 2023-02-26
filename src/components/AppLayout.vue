@@ -1,6 +1,6 @@
 <script setup>
 import {
-  ref, reactive, onMounted,
+  ref, reactive, onMounted, computed,
 } from 'vue';
 import { register } from 'swiper/element/bundle';
 
@@ -23,6 +23,10 @@ const state = reactive({
   activeSlide: 0,
   totalSlide: 0,
 });
+
+const showNavigation = computed(() => state.activeSlide !== 0
+&& state.activeSlide !== 1
+&& state.activeSlide !== 6);
 
 onMounted(() => {
   Object.assign(swiperContainer.value, {
@@ -69,7 +73,7 @@ const onSlideChange = () => {
     @init="onInit"
     @slidechange="onSlideChange"
   >
-    <div v-if="state.activeSlide !== 0 && state.activeSlide !== 5" class="navigation">
+    <div v-if="showNavigation" class="navigation">
       <div class="left">
         {{ state.activeSlide }} / {{ state.totalSlide }}
       </div>
