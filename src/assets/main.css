@@ -1,12 +1,15 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
+  max-width: 640px;
+
   margin: 0 auto;
   font-weight: normal;
 
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+
+  box-shadow: 6px 0 9px 5px rgba(0, 0, 0, 0.15);
 }
 
 a,
@@ -27,7 +30,7 @@ button.roundButton {
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 300px) {
   body {
     display: flex;
     place-items: center;
@@ -38,7 +41,7 @@ button.roundButton {
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+} */
 
 /* Expansion panel */
 #regards .v-expansion-panel {
