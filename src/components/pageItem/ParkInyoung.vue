@@ -31,18 +31,21 @@ import bride from '@/assets/texts/bride.svg';
   background: var(--color-background-green);
 
   .portrait {
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
+    aspect-ratio : 1 / 1;
 
     background-image: url('@/assets/images/ParkInyoung.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
     top: 150px;
   }
 
   .brideText {
-    top: 100px;
+    position: absolute;
+    width: 100%;
+    top: 56%;
   }
 
   .name {
@@ -53,14 +56,14 @@ import bride from '@/assets/texts/bride.svg';
     line-height: 100%;
 
     position: absolute;
-    width: 100vw;
-    top: calc(150px + 100vw - 25px);
+    width: 100%;
+    top: calc(56% + 35px);
   }
 
   .nameKo {
-    width: 100vw;
+    width: 100%;
     position: absolute;
-    top: calc(150px + 100vw + 75px);
+    top: calc(56% + 145px);
 
     font-family: 'Noto Serif KR';
     font-style: normal;
@@ -72,7 +75,7 @@ import bride from '@/assets/texts/bride.svg';
   .description {
     width: 100vw;
     position: absolute;
-    top: calc(150px + 100vw + 120px);
+    top: calc(56% + 190px);
 
     font-family: 'Noto Serif KR';
     font-style: normal;
