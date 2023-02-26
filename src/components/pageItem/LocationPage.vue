@@ -50,24 +50,39 @@ onMounted(() => {
     <div class="navLinks">
       <v-btn
         rounded
+        href="https://naver.me/FMA1cf6j"
+        target="_blank"
+        rel="noopener noreferrer"
       >
+        <template #prepend>
+          <img :src="naverMap" alt="Naver Map">
+        </template>
         네이버 지도
       </v-btn>
 
-      <!-- <button type="button" class="roundButton">
-        <img :src="naverMap" alt="Naver Map">
-        네이버 지도
-      </button>
-
-      <button type="button" class="roundButton">
-        <img :src="kakaoNav" alt="Kakao Nav">
+      <v-btn
+        rounded
+        href="http://kko.to/2FgVgnDTYg"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <template #prepend>
+          <img :src="naverMap" alt="Naver Map">
+        </template>
         카카오 내비
-      </button>
+      </v-btn>
 
-      <button type="button" class="roundButton">
-        <img :src="tMap" alt="TMap">
+      <v-btn
+        rounded
+        href="https://surl.tmap.co.kr/68b2f39e"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <template #prepend>
+          <img :src="tMap" alt="TMap">
+        </template>
         티맵
-      </button> -->
+      </v-btn>
     </div>
 
     <div class="description2">
@@ -140,25 +155,17 @@ onMounted(() => {
     width: 322px;
     left: calc(50vw - 322px/2 + 0.5px);
 
-    /* button {
-      border-width: 0px;
-      height: 36px;
+    a.v-btn {
+      color: var(--color-text-green);
       background: rgba(255, 255, 255, 0.8);
-      padding: 8px 12px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
+      padding: 0 12px;
 
       font-family: 'Noto Sans KR';
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
-      text-align: center;
-      color: var(--color-text-green)
-    } */
+    }
   }
 
   .description2 {
