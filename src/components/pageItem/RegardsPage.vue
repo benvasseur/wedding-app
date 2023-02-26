@@ -4,6 +4,8 @@ import rings from '@/assets/images/rings.png';
 import copy from '@/assets/images/contentCopy.svg';
 import kakao from '@/assets/images/kakao.svg';
 import link from '@/assets/images/link.svg';
+import chevronDown from '@/assets/images/chevronDown.svg';
+import chevronUp from '@/assets/images/chevronUp.svg';
 
 const clickLinkCopy = () => {
   navigator.clipboard.writeText(window.location.origin);
@@ -192,21 +194,22 @@ const clickBankCopy = () => {
 
   .regards {
     position: absolute;
-    top: 23.65%;
-    width: 100vw;
+    top: 90px;
+    width: 100%;
+    text-align: center;
   }
 
   .rings {
     position: absolute;
-    top: 239px;
-    width: 100vw;
+    top: 125px;
+    width: 100%;
   }
 
   .accordion {
     position: absolute;
-    top: 430px;
-    width: 90%;
-    margin-left: 5%;
+    top: 300px;
+    width: calc(100% - 40px);
+    margin: 0 20px;
 
     .accContent {
       display: flex;
