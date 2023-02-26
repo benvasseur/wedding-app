@@ -24,12 +24,12 @@ const state = reactive({
   totalSlide: 0,
 });
 
-// eslint-disable-next-line arrow-body-style
-const showNavigation = computed(() => {
-  return state.activeSlide !== 1
-    && state.activeSlide !== 0
-    && state.activeSlide !== 6;
-});
+const showPagination = computed(() => state.activeSlide !== 1
+    && state.activeSlide !== 0);
+
+const showLocationLink = computed(() => state.activeSlide !== 1
+  && state.activeSlide !== 0
+  && state.activeSlide !== 6);
 
 onMounted(() => {
   Object.assign(swiperContainer.value, {
@@ -84,11 +84,11 @@ const onSlideChange = () => {
     @init="onInit"
     @slidechange="onSlideChange"
   >
-    <div v-if="showNavigation" class="navigation">
-      <div class="left">
+    <div class="navigation">
+      <div v-show="showPagination" class="left">
         {{ state.activeSlide }} / {{ state.totalSlide }}
       </div>
-      <div class="right">
+      <div v-show="showLocationLink" class="right">
         <v-btn
           rounded
           variant="outlined"

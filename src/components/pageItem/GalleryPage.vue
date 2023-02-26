@@ -20,10 +20,10 @@ const galleryRef = ref(null);
       ref="galleryRef"
       class="gallery"
       :pagination="true"
-      :navigation="true"
       :mousewheel="true"
       :pagination-clickable="true"
       :loop="true"
+      :space-between="20"
     >
       <swiper-slide class="swiperSlide">
         <img :src="coverImage" alt="image" />
@@ -51,22 +51,34 @@ const galleryRef = ref(null);
 
   .galleryText {
     position: absolute;
-    top: 15%;
-    width: 100vw;
+    top: 90px;
+    width: 100%;
+    text-align: center;
   }
 
   .gallery {
     position: absolute;
-    top: 25%;
-    width: 100vw;
-    height: 50vh;
+    top: 130px;
+    width: calc(100% - 40px);
+    aspect-ratio: 1 / 1.5;
+    margin: 0 20px;
+    padding-bottom: 35px;
   }
 
   swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
+  }
+}
+</style>
+
+<style lang="scss">
+#galleryPage {
+  .swiper-pagination {
+    position: absolute;
+    bottom: 0px;
   }
 }
 </style>

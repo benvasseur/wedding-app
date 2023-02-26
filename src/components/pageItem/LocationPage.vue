@@ -108,15 +108,16 @@ onMounted(() => {
 
   .location {
     position: absolute;
-    top: 15.52%;
-    width: 100vw;
+    top: 90px;
+    width: 100%;
+    text-align: center;
   }
 
   .description1 {
     position: absolute;
     height: 32px;
-    width: 100vw;
-    top: 170px;
+    width: 100%;
+    top: 135px;
 
     font-family: 'Noto Serif KR';
     font-style: normal;
@@ -136,12 +137,10 @@ onMounted(() => {
 
   #map {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 240px;
-    top: 259px;
-
+    top: 230px;
     background: #D9D9D9;
-
     color: black;
   }
 
@@ -150,9 +149,8 @@ onMounted(() => {
     justify-content: center;
     gap: 8px;
     position: absolute;
-    top: 515px;
-    width: 322px;
-    left: calc(50vw - 322px/2 + 0.5px);
+    top: 488px;
+    width: 100%;
 
     a.v-btn {
       color: var(--color-text-green);
@@ -169,8 +167,8 @@ onMounted(() => {
 
   .description2 {
     position: absolute;
-    width: 100vw;
-    top: 565px;
+    width: 100%;
+    top: 554px;
     text-align: left;
     margin-left: 25px;
 
