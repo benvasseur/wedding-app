@@ -9,6 +9,7 @@ import kakaoNav from '@/assets/images/kakaoNav.png';
 import tMap from '@/assets/images/tMap.png';
 
 const props = defineProps(['isVisible']);
+const emit = defineEmits(['mapTouchStart', 'mapTouchEnd']);
 
 const locationLatLng = new naver.maps.LatLng(37.505408, 127.028848);
 const defaultZoom = 15;
@@ -22,11 +23,22 @@ onMounted(() => {
     map = new naver.maps.Map('map', {
       center: locationLatLng,
       zoom: defaultZoom,
+      scaleControl: false,
+      mapDataControl: false,
+      // draggable: false,
+      scrollWheel: false,
     });
 
     marker = new naver.maps.Marker({
       position: locationLatLng,
       map,
+    });
+
+    naver.maps.Event.addListener(map, 'touchstart', () => {
+      emit('mapTouchStart');
+    });
+    naver.maps.Event.addListener(map, 'touchend', () => {
+      emit('mapTouchEnd');
     });
   } catch (error) {
     console.log(error);

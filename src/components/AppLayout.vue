@@ -70,6 +70,14 @@ const onInit = () => {
 const onSlideChange = () => {
   state.activeSlide = swiperContainer.value.swiper.activeIndex + 1;
 };
+
+const onMapTouchStart = () => {
+  swiperContainer.value.swiper.allowTouchMove = false;
+};
+
+const onMapTouchEnd = () => {
+  swiperContainer.value.swiper.allowTouchMove = true;
+};
 </script>
 
 <template>
@@ -81,6 +89,7 @@ const onSlideChange = () => {
     :mousewheel="true"
     :init="false"
     effect="creative"
+    :touch-move-stop-propagation="true"
     @init="onInit"
     @slidechange="onSlideChange"
   >
@@ -123,7 +132,11 @@ const onSlideChange = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <Location :is-visible="state.activeSlide === 6" />
+      <Location
+        :is-visible="state.activeSlide === 6"
+        @map-touch-start="onMapTouchStart"
+        @map-touch-end="onMapTouchEnd"
+      />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
