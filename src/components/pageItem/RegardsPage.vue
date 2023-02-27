@@ -4,8 +4,6 @@ import rings from '@/assets/images/rings.png';
 import copy from '@/assets/images/contentCopy.svg';
 import kakao from '@/assets/images/kakao.svg';
 import link from '@/assets/images/link.svg';
-import chevronDown from '@/assets/images/chevronDown.svg';
-import chevronUp from '@/assets/images/chevronUp.svg';
 
 const clickLinkCopy = () => {
   navigator.clipboard.writeText(window.location.origin);

@@ -123,7 +123,7 @@ const onSlideChange = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <Location />
+      <Location :is-visible="state.activeSlide === 6" />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">

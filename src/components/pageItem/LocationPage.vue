@@ -1,6 +1,6 @@
 <!-- eslint-disable no-undef -->
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, watch } from 'vue';
 import location from '@/assets/texts/location.svg';
 import subway from '@/assets/texts/subway.svg';
 
@@ -8,20 +8,39 @@ import naverMap from '@/assets/images/naverMap.png';
 import kakaoNav from '@/assets/images/kakaoNav.png';
 import tMap from '@/assets/images/tMap.png';
 
+const props = defineProps(['isVisible']);
+
+const locationLatLng = new naver.maps.LatLng(37.505408, 127.028848);
+const defaultZoom = 15;
+
+let map;
+// eslint-disable-next-line no-unused-vars
+let marker;
+
 onMounted(() => {
   try {
-    const map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(37.505408, 127.028848),
-      zoom: 15,
+    map = new naver.maps.Map('map', {
+      center: locationLatLng,
+      zoom: defaultZoom,
     });
 
-    // eslint-disable-next-line no-unused-vars
-    const marker = new naver.maps.Marker({
-      position: new naver.maps.LatLng(37.505408, 127.028848),
+    marker = new naver.maps.Marker({
+      position: locationLatLng,
       map,
     });
   } catch (error) {
     console.log(error);
+  }
+});
+
+watch(() => props.isVisible, (isVisible) => {
+  if (isVisible) {
+    try {
+      map.setCenter(locationLatLng);
+      map.setZoom(defaultZoom);
+    } catch (error) {
+      console.log(error);
+    }
   }
 });
 
