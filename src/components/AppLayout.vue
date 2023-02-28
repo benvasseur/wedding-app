@@ -90,6 +90,7 @@ const onMapTouchEnd = () => {
     :init="false"
     effect="creative"
     :touch-move-stop-propagation="true"
+    :css-mode="true"
     @init="onInit"
     @slidechange="onSlideChange"
   >
