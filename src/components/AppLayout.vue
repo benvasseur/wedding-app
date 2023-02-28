@@ -106,7 +106,7 @@ const onMapTouchEnd = () => {
     :css-mode="false"
     :set-wrapper-size="true"
     :update-on-window-resize="false"
-    :resize-observer="false"
+    :resize-observer="true"
     @init="onInit"
     @resize="onResize"
     @afterinit="onAfterInit"
