@@ -79,6 +79,8 @@ body {
   color: white
 }
 
-.swiperSlide>div {
-  zoom: 75%;
+@media (max-height: 650px) {
+  .swiperSlide>div {
+    zoom: 75%;
+  }
 }
