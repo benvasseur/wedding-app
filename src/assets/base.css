@@ -78,3 +78,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: white
 }
+
+.swiperSlide>div {
+  zoom: 75%;
+}
