@@ -5,12 +5,39 @@ import copy from '@/assets/images/contentCopy.svg';
 import kakao from '@/assets/images/kakao.svg';
 import link from '@/assets/images/link.svg';
 
+const clickBankCopy = () => {
+  navigator.clipboard.writeText('1002945123456');
+};
+
 const clickLinkCopy = () => {
   navigator.clipboard.writeText(window.location.origin);
 };
 
-const clickBankCopy = () => {
-  navigator.clipboard.writeText('1002945123456');
+const clickKakaoShare = () => {
+  // eslint-disable-next-line no-undef
+  Kakao.Share.sendDefault({
+    objectType: 'feed',
+    content: {
+      title: 'Wedding Invitation',
+      description: 'Suhyun and Inyoung wedding invitation',
+      imageUrl:
+          'https://wedding-inyoung.netlify.app/assets/coverImage3-4f9fb644.jpeg',
+      link: {
+        // Must match the site domain registered in [My Application] > [Platform]
+        mobileWebUrl: 'https://wedding-inyoung.netlify.app',
+        webUrl: 'https://wedding-inyoung.netlify.app',
+      },
+    },
+    buttons: [
+      {
+        title: 'View on Web',
+        link: {
+          mobileWebUrl: 'https://wedding-inyoung.netlify.app',
+          webUrl: 'https://wedding-inyoung.netlify.app',
+        },
+      },
+    ],
+  });
 };
 
 </script>
@@ -155,7 +182,7 @@ const clickBankCopy = () => {
       <v-btn
         rounded
         flat
-        @click="clickLinkCopy"
+        @click="clickKakaoShare"
       >
         <template #prepend>
           <img :src="kakao" alt="kakao share" />
