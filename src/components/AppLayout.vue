@@ -67,19 +67,6 @@ const onInit = () => {
   state.totalSlide = swiperContainer.value?.swiper.slides.length;
 };
 
-const onAfterInit = (swiper) => {
-  console.log('after init');
-  // console.log('after init', swiper);
-  // // if (swiper.device.ios) {
-  // swiper.resize.removeObserver();
-  // window.removeEventListener('resize', swiper.resize.resizeHandler);
-  // // }
-};
-
-const onResize = () => {
-  // console.log('resize');
-};
-
 const onSlideChange = () => {
   state.activeSlide = swiperContainer.value.swiper.activeIndex + 1;
 };
@@ -105,11 +92,9 @@ const onMapTouchEnd = () => {
     :touch-move-stop-propagation="true"
     :css-mode="false"
     :set-wrapper-size="true"
-    :update-on-window-resize="false"
+    :update-on-window-resize="true"
     :resize-observer="true"
     @init="onInit"
-    @resize="onResize"
-    @afterinit="onAfterInit"
     @slidechange="onSlideChange"
   >
     <div class="navigation">
