@@ -31,6 +31,10 @@ const showLocationLink = computed(() => state.activeSlide !== 1
   && state.activeSlide !== 0
   && state.activeSlide !== 6);
 
+const needUpdate = computed(() => swiperContainer?.value?.swiper.device.ios
+  && (swiperContainer?.value?.swiper.browser.isSafari
+    || swiperContainer?.value?.swiper.browser.isWebView));
+
 onMounted(() => {
   Object.assign(swiperContainer.value, {
     creativeEffect: {
@@ -70,6 +74,18 @@ const onInit = () => {
 const onSlideChange = () => {
   state.activeSlide = swiperContainer.value.swiper.activeIndex + 1;
 };
+
+const onTransitionEnd = () => {
+  // console.log('transition end', swiperContainer.value?.swiper);
+  if (needUpdate.value) {
+    // console.log('update');
+    swiperContainer.value.swiper.update();
+  }
+};
+
+const onTouchEnd = () => {
+  // console.log('touch end');
+};
 </script>
 
 <template>
@@ -86,6 +102,8 @@ const onSlideChange = () => {
     :no-swiping="true"
     @init="onInit"
     @slidechange="onSlideChange"
+    @transitionend="onTransitionEnd"
+    @touchend="onTouchEnd"
   >
     <div class="navigation">
       <div v-show="showPagination" class="left">
