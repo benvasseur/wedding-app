@@ -75,17 +75,14 @@ const onSlideChange = () => {
   state.activeSlide = swiperContainer.value.swiper.activeIndex + 1;
 };
 
-const onTransitionEnd = () => {
-  // console.log('transition end', swiperContainer.value?.swiper);
-  if (needUpdate.value) {
-    // console.log('update');
-    swiperContainer.value.swiper.update();
+const onTransitionEnd = (event) => {
+  if (event.propertyName === 'opacity' && needUpdate.value) {
+    setTimeout(() => {
+      swiperContainer.value.swiper.update();
+    }, 100);
   }
 };
 
-const onTouchEnd = () => {
-  // console.log('touch end');
-};
 </script>
 
 <template>
@@ -98,12 +95,11 @@ const onTouchEnd = () => {
     :init="false"
     effect="creative"
     :touch-move-stop-propagation="true"
-    :set-wrapper-size="true"
+    :set-wrapper-size="false"
     :no-swiping="true"
     @init="onInit"
     @slidechange="onSlideChange"
     @transitionend="onTransitionEnd"
-    @touchend="onTouchEnd"
   >
     <div class="navigation">
       <div v-show="showPagination" class="left">
