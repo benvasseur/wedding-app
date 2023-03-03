@@ -70,14 +70,6 @@ const onInit = () => {
 const onSlideChange = () => {
   state.activeSlide = swiperContainer.value.swiper.activeIndex + 1;
 };
-
-const onMapTouchStart = () => {
-  swiperContainer.value.swiper.allowTouchMove = false;
-};
-
-const onMapTouchEnd = () => {
-  swiperContainer.value.swiper.allowTouchMove = true;
-};
 </script>
 
 <template>
@@ -94,6 +86,7 @@ const onMapTouchEnd = () => {
     :set-wrapper-size="true"
     :update-on-window-resize="true"
     :resize-observer="true"
+    :no-swiping="true"
     @init="onInit"
     @slidechange="onSlideChange"
   >
@@ -136,11 +129,7 @@ const onMapTouchEnd = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <Location
-        :is-visible="state.activeSlide === 6"
-        @map-touch-start="onMapTouchStart"
-        @map-touch-end="onMapTouchEnd"
-      />
+      <Location :is-visible="state.activeSlide === 6" />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">

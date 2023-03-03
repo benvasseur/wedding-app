@@ -9,7 +9,6 @@ import kakaoNav from '@/assets/images/kakaoNav.png';
 import tMap from '@/assets/images/tMap.png';
 
 const props = defineProps(['isVisible']);
-const emit = defineEmits(['mapTouchStart', 'mapTouchEnd']);
 
 const locationLatLng = new naver.maps.LatLng(37.505408, 127.028848);
 const defaultZoom = 15;
@@ -32,13 +31,6 @@ onMounted(() => {
     marker = new naver.maps.Marker({
       position: locationLatLng,
       map,
-    });
-
-    naver.maps.Event.addListener(map, 'touchstart', () => {
-      emit('mapTouchStart');
-    });
-    naver.maps.Event.addListener(map, 'touchend', () => {
-      emit('mapTouchEnd');
     });
   } catch (error) {
     console.log(error);
@@ -73,7 +65,7 @@ watch(() => props.isVisible, (isVisible) => {
       </p>
     </div>
 
-    <div id="map" style="width:100%;height:240px;">
+    <div id="map" class="swiper-no-swiping" style="width:100%;height:240px;">
       MAP
     </div>
 
