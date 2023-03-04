@@ -38,8 +38,9 @@ const clickKakaoShare = () => {
   Kakao.Share.sendDefault({
     objectType: 'feed',
     content: {
-      title: 'Wedding Invitation',
-      description: 'Suhyun and Inyoung wedding invitation',
+      title: '이수현 & 박인영 결혼합니다',
+      description: `5월 28일 일요일 오후 2시
+노보텔 앰배서더 강남`,
       imageUrl:
           'https://wedding-inyoung.netlify.app/assets/coverImage3-4f9fb644.jpeg',
       link: {
@@ -50,7 +51,7 @@ const clickKakaoShare = () => {
     },
     buttons: [
       {
-        title: 'View on Web',
+        title: '청첩장 보기',
         link: {
           mobileWebUrl: 'https://wedding-inyoung.netlify.app',
           webUrl: 'https://wedding-inyoung.netlify.app',
