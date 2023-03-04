@@ -5,13 +5,13 @@ import {
 import { register } from 'swiper/element/bundle';
 
 import AppCover from './pageItem/AppCover.vue';
-import SaveTheDate from './pageItem/SaveTheDate.vue';
-import ParkInyoung from './pageItem/ParkInyoung.vue';
-import LeeSuhyun from './pageItem/LeeSuhyun.vue';
+import DatePage from './pageItem/DatePage.vue';
+import BridePage from './pageItem/BridePage.vue';
+import GroomPage from './pageItem/GroomPage.vue';
 import Invitation from './pageItem/InvitationPage.vue';
 import Location from './pageItem/LocationPage.vue';
 import Gallery from './pageItem/GalleryPage.vue';
-import Regards from './pageItem/RegardsPage.vue';
+import RegardsPage from './pageItem/RegardsPage.vue';
 
 import location from '@/assets/images/location.svg';
 
@@ -111,15 +111,15 @@ const onSlideChange = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <SaveTheDate />
+      <DatePage />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <LeeSuhyun />
+      <GroomPage />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <ParkInyoung />
+      <BridePage />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
@@ -135,7 +135,7 @@ const onSlideChange = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <Regards />
+      <RegardsPage />
     </swiper-slide>
   </swiper-container>
 </template>
