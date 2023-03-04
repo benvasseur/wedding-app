@@ -107,7 +107,7 @@ const onSlideChange = () => {
     </div>
 
     <swiper-slide class="swiperSlide">
-      <RegardsPage />
+      <Invitation />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">

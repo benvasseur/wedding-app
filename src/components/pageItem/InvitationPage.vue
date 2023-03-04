@@ -51,7 +51,7 @@ import rings from '@/assets/images/rings.png';
 
   .description {
     position: absolute;
-    top: 375px;
+    top: 340px;
     width: 100%;
 
     font-family: 'Noto Serif KR';
