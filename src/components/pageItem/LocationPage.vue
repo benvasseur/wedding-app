@@ -38,6 +38,7 @@ onMounted(() => {
 });
 
 watch(() => props.isVisible, (isVisible) => {
+  // Recenter map when page is visible
   if (isVisible) {
     try {
       map.setCenter(locationLatLng);
@@ -65,7 +66,7 @@ watch(() => props.isVisible, (isVisible) => {
       </p>
     </div>
 
-    <div id="map" class="swiper-no-swiping" style="width:100%;height:240px;">
+    <div id="map" style="width:100%;height:240px;">
       MAP
     </div>
 
