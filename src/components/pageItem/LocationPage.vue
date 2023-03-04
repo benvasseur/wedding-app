@@ -72,7 +72,7 @@ watch(() => props.isVisible, (isVisible) => {
     <div class="navLinks">
       <v-btn
         rounded
-        href="https://naver.me/FMA1cf6j"
+        href="https://naver.me/51nyDPmO"
         target="_blank"
         rel="noopener noreferrer"
       >
