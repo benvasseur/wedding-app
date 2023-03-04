@@ -80,7 +80,7 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 26px;
+    line-height: 32px;
 
     p:first-child {
       margin-bottom: 15px;
