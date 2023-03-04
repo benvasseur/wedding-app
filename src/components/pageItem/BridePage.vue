@@ -63,7 +63,7 @@ import bride from '@/assets/texts/bride.svg';
   .nameKo {
     width: 100%;
     position: absolute;
-    top: calc(56% + 145px);
+    top: calc(56% + 155px);
 
     font-family: 'Noto Serif KR';
     font-style: normal;
@@ -73,9 +73,9 @@ import bride from '@/assets/texts/bride.svg';
   }
 
   .description {
-    width: 100vw;
+    width: 100%;
     position: absolute;
-    top: calc(56% + 190px);
+    top: calc(56% + 200px);
 
     font-family: 'Noto Serif KR';
     font-style: normal;

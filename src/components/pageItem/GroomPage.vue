@@ -63,7 +63,7 @@ import groom from '@/assets/texts/groom.svg';
   .nameKo {
     width: 100%;
     position: absolute;
-    top: calc(56% + 145px);
+    top: calc(56% + 155px);
 
     font-family: 'Noto Serif KR';
     font-style: normal;
@@ -75,7 +75,7 @@ import groom from '@/assets/texts/groom.svg';
   .description {
     width: 100%;
     position: absolute;
-    top: calc(56% + 190px);
+    top: calc(56% + 200px);
 
     font-family: 'Noto Serif KR';
     font-style: normal;
