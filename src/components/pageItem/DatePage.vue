@@ -63,18 +63,18 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
     text-align: center;
     top: calc(35% + 120px);
 
-    font-family: 'DM Serif Display';
+    font-family: 'Noto Serif KR';
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 23px;
   }
 
   .description {
     position: absolute;
     width: 100%;
     text-align: center;
-    bottom: 15%;
+    bottom: 10%;
 
     font-family: 'Noto Serif KR';
     font-style: normal;
