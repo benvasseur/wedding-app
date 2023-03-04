@@ -33,7 +33,7 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
   width: 100%;
   text-align: center;
 
-  background-image: url('@/assets/images/saveTheDate.png');
+  background-image: url('@/assets/images/saveTheDate.jpg');
   background-color: var(--color-background-green);
   background-repeat: no-repeat;
   background-size: cover;
