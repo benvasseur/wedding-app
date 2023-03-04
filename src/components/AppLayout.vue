@@ -115,11 +115,11 @@ const onSlideChange = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <ParkInyoung />
+      <LeeSuhyun />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <LeeSuhyun />
+      <ParkInyoung />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
