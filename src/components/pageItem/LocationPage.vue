@@ -5,7 +5,7 @@ import location from '@/assets/texts/location.svg';
 import subway from '@/assets/texts/subway.svg';
 
 import naverMap from '@/assets/images/naverMap.png';
-import kakaoNav from '@/assets/images/kakaoNav.png';
+import kakaoMap from '@/assets/images/kakaoMap.png';
 import tMap from '@/assets/images/tMap.png';
 
 const props = defineProps(['isVisible']);
@@ -91,9 +91,9 @@ watch(() => props.isVisible, (isVisible) => {
         rel="noopener noreferrer"
       >
         <template #prepend>
-          <img :src="kakaoNav" alt="Naver Map">
+          <img :src="kakaoMap" alt="Naver Map">
         </template>
-        카카오 내비
+        카카오맵
       </v-btn>
 
       <v-btn
