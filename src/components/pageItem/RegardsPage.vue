@@ -306,12 +306,12 @@ const clickKakaoShare = () => {
 
   .share {
     display: flex;
-    justify-content: space-between;
-    width: 250px;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
 
     position: absolute;
     bottom: 60px;
-    left: calc(50vw - 125px);
 
     button {
       background: #F8F6F2;

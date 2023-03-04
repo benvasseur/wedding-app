@@ -77,3 +77,7 @@ button.roundButton {
 .v-expansion-panel--active>.v-expansion-panel-title {
   min-height: 48px;
 }
+
+.v-expansion-panel:not(:first-child)::after {
+  border-top-style: hidden;
+}
