@@ -2,7 +2,8 @@
 import { createToaster } from '@meforma/vue-toaster';
 import useClipboard from 'vue-clipboard3';
 import regards from '@/assets/texts/regards.svg';
-import cake from '@/assets/images/cake.jpeg';
+// import cake from '@/assets/images/cake.jpeg';
+import cake from '@/assets/images/rings.png';
 import copy from '@/assets/images/contentCopy.svg';
 import kakao from '@/assets/images/kakao.svg';
 import link from '@/assets/images/link.svg';
@@ -71,7 +72,7 @@ const clickKakaoShare = () => {
     </div>
 
     <div class="cake">
-      <!-- <img :src="cake" alt="cake" /> -->
+      <img :src="cake" alt="cake" />
     </div>
 
     <v-expansion-panels class="accordion">
@@ -276,13 +277,13 @@ const clickKakaoShare = () => {
 
   .cake {
     position: absolute;
-    top: 125px;
+    top: 120px;
     width: 100%;
   }
 
   .accordion {
     position: absolute;
-    top: 300px;
+    top: 290px;
     width: calc(100% - 40px);
     margin: 0 20px;
 
@@ -359,7 +360,7 @@ const clickKakaoShare = () => {
     width: 100%;
 
     position: absolute;
-    bottom: 60px;
+    bottom: 48px;
 
     button {
       background: #F8F6F2;
@@ -385,7 +386,7 @@ const clickKakaoShare = () => {
 
   .legal {
     position: absolute;
-    bottom: 20px;
+    bottom: 16px;
     width: 100%;
     text-align: center;
 

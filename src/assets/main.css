@@ -45,7 +45,7 @@ button.roundButton {
 
 /* Expansion panel */
 #regards .v-expansion-panel {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   border-top-left-radius: 8px !important;
   border-top-right-radius: 8px !important;
