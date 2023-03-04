@@ -2,7 +2,7 @@
 import { createToaster } from '@meforma/vue-toaster';
 import useClipboard from 'vue-clipboard3';
 import regards from '@/assets/texts/regards.svg';
-import rings from '@/assets/images/rings.png';
+import cake from '@/assets/images/cake.jpeg';
 import copy from '@/assets/images/contentCopy.svg';
 import kakao from '@/assets/images/kakao.svg';
 import link from '@/assets/images/link.svg';
@@ -68,8 +68,8 @@ const clickKakaoShare = () => {
       <img :src="regards" alt="regards" />
     </div>
 
-    <div class="rings">
-      <img :src="rings" alt="rings" />
+    <div class="cake">
+      <!-- <img :src="cake" alt="cake" /> -->
     </div>
 
     <v-expansion-panels class="accordion">
@@ -272,7 +272,7 @@ const clickKakaoShare = () => {
     text-align: center;
   }
 
-  .rings {
+  .cake {
     position: absolute;
     top: 125px;
     width: 100%;
