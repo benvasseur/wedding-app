@@ -302,14 +302,12 @@ const clickKakaoShare = () => {
         .personInfo {
           font-weight: 600;
         }
-
-        .bankInfo {
-          margin-top: 10px;
-        }
       }
 
       .blockRight {
-        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         button {
           padding: 0;
