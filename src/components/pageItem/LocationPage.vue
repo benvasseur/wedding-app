@@ -17,35 +17,35 @@ let map;
 // eslint-disable-next-line no-unused-vars
 let marker;
 
-onMounted(() => {
-  try {
-    map = new naver.maps.Map('map', {
-      center: locationLatLng,
-      zoom: defaultZoom,
-      scaleControl: false,
-      mapDataControl: false,
-      // draggable: false,
-      scrollWheel: false,
-    });
+// function to init map
+const initMap = () => {
+  map = new naver.maps.Map('map', {
+    center: locationLatLng,
+    zoom: defaultZoom,
+    scaleControl: false,
+    mapDataControl: false,
+    draggable: false,
+    scrollWheel: false,
+  });
 
-    marker = new naver.maps.Marker({
-      position: locationLatLng,
-      map,
-    });
-  } catch (error) {
-    console.log(error);
-  }
-});
+  marker = new naver.maps.Marker({
+    position: locationLatLng,
+    map,
+  });
+};
 
 watch(() => props.isVisible, (isVisible) => {
-  // Recenter map when page is visible
+  // Weird bug on safari: marker disappear when swiping from card 5 to 6
+  // naver maps doc is really bad to fix this bug proprely,
+  // so I just destroy the map and re-create it when the page is visible
   if (isVisible) {
     try {
-      map.setCenter(locationLatLng);
-      map.setZoom(defaultZoom);
+      initMap();
     } catch (error) {
       console.log(error);
     }
+  } else {
+    map.destroy();
   }
 });
 
@@ -69,9 +69,7 @@ watch(() => props.isVisible, (isVisible) => {
       </p>
     </div>
 
-    <div id="map" style="width:100%;height:240px;">
-      MAP
-    </div>
+    <div id="map" style="width:100%;height:240px;" />
 
     <div class="navLinks">
       <v-btn
@@ -167,8 +165,6 @@ watch(() => props.isVisible, (isVisible) => {
     width: 100%;
     height: 240px;
     top: 230px;
-    background: #D9D9D9;
-    color: black;
   }
 
   .navLinks {

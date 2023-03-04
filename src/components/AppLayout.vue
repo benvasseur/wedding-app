@@ -22,6 +22,7 @@ const swiperContainer = ref(null);
 const state = reactive({
   activeSlide: 0,
   totalSlide: 0,
+  isLocationVisible: false,
 });
 
 const showPagination = computed(() => state.activeSlide !== 1
@@ -71,6 +72,11 @@ const onSlideChange = () => {
   state.activeSlide = swiperContainer.value.swiper.activeIndex + 1;
 };
 
+const onTransitionEnd = (event) => {
+  if (event.propertyName === 'transform') {
+    state.isLocationVisible = state.activeSlide === 6;
+  }
+};
 </script>
 
 <template>
@@ -87,6 +93,7 @@ const onSlideChange = () => {
     :no-swiping="true"
     @init="onInit"
     @slidechange="onSlideChange"
+    @transitionend="onTransitionEnd"
   >
     <div class="navigation">
       <div v-show="showPagination" class="left">
@@ -127,7 +134,7 @@ const onSlideChange = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <LocationPage :is-visible="state.activeSlide === 6" />
+      <LocationPage :is-visible="state.isLocationVisible" />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
