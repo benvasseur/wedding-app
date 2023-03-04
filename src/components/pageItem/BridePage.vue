@@ -35,7 +35,6 @@ import bride from '@/assets/texts/bride.svg';
 
   .portrait {
     width: 100%;
-    aspect-ratio : 1 / 1;
 
     background-image: url('@/assets/images/ParkInyoung.png');
     background-repeat: no-repeat;
@@ -43,6 +42,22 @@ import bride from '@/assets/texts/bride.svg';
     background-position: center;
 
     top: 150px;
+
+    aspect-ratio : 1 / 1;
+    // Fallback
+    @supports not (aspect-ratio: 1 / 1) {
+      &::before {
+        float: left;
+        padding-top: 100%;
+        content: "";
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    }
   }
 
   .brideText {

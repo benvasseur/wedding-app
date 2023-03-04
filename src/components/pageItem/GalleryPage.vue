@@ -90,10 +90,25 @@ const galleryRef = ref(null);
     position: absolute;
     top: 130px;
     width: calc(100% - 40px);
-    aspect-ratio: 1 / 1.5;
     max-height: 70%;
     margin: 0 20px;
     padding-bottom: 35px;
+
+    aspect-ratio: 1 / 1.5;
+    // Fallback
+    @supports not (aspect-ratio: 1 / 1) {
+      &::before {
+        float: left;
+        padding-top: 150%;
+        content: "";
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    }
   }
 
   /* <IMG> style */

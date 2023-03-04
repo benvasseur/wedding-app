@@ -35,7 +35,6 @@ import groom from '@/assets/texts/groom.svg';
 
   .portrait {
     width: 100%;
-    aspect-ratio : 1 / 1;
 
     background-image: url('@/assets/images/LeeSuhyun.png');
     background-repeat: no-repeat;
@@ -43,6 +42,22 @@ import groom from '@/assets/texts/groom.svg';
     background-position: center;
 
     top: 150px;
+
+    aspect-ratio : 1 / 1;
+    // Fallback
+    @supports not (aspect-ratio: 1 / 1) {
+      &::before {
+        float: left;
+        padding-top: 100%;
+        content: "";
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    }
   }
 
   .groomText {
