@@ -13,13 +13,13 @@ const galleryRef = ref(null);
 <template>
   <div id="galleryPage">
     <div class="galleryText">
-      <!-- <img :src="gallery" alt="gallery" /> -->
       <v-img
         :src="gallery"
         :width="92"
       />
     </div>
 
+    <!-- <div class="wrapper"> -->
     <swiper-container
       ref="galleryRef"
       class="gallery"
@@ -29,25 +29,10 @@ const galleryRef = ref(null);
       :loop="true"
       :space-between="20"
     >
-      <!-- <IMG> style -->
-      <!-- <swiper-slide class="swiperSlide">
-        <img :src="coverImage" alt="image" />
-      </swiper-slide> -->
-
-      <!-- <swiper-slide class="swiperSlide">
-        <img :src="coverImage2" alt="image" />
-      </swiper-slide> -->
-
-      <!-- <swiper-slide class="swiperSlide">
-        <img :src="ParkInyoung" alt="image" />
-      </swiper-slide> -->
-
-      <!-- <V-IMG> style-->
       <swiper-slide class="swiperSlide">
         <v-img
           :src="coverImage"
           height="100%"
-          cover
         />
       </swiper-slide>
 
@@ -55,7 +40,6 @@ const galleryRef = ref(null);
         <v-img
           :src="coverImage2"
           height="100%"
-          cover
         />
       </swiper-slide>
 
@@ -63,10 +47,10 @@ const galleryRef = ref(null);
         <v-img
           :src="ParkInyoung"
           height="100%"
-          cover
         />
       </swiper-slide>
     </swiper-container>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -90,13 +74,14 @@ const galleryRef = ref(null);
     position: absolute;
     top: 130px;
     width: calc(100% - 40px);
-    max-height: 70%;
+    height: 70%;
+    /* max-height: 70%; */
     margin: 0 20px;
     padding-bottom: 35px;
 
-    aspect-ratio: 1 / 1.5;
+    /* aspect-ratio: 1 / 1.5;
     // Fallback
-    @supports not (aspect-ratio: 1 / 1) {
+    @supports not (aspect-ratio: 1 / 1.5) {
       &::before {
         float: left;
         padding-top: 150%;
@@ -108,19 +93,9 @@ const galleryRef = ref(null);
         content: "";
         clear: both;
       }
-    }
+    } */
   }
 
-  /* <IMG> style */
-  /* swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  } */
-
-  /* <V-IMG> style */
   swiper-slide {
     height: 100%;
   }
