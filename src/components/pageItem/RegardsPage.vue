@@ -290,7 +290,7 @@ const clickKakaoShare = () => {
 
       .blockLeft {
         color: #64837D;
-        font-family: 'Noto Sans';
+        font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -311,7 +311,7 @@ const clickKakaoShare = () => {
 
         button {
           padding: 0;
-          font-family: 'Noto Sans';
+          font-family: 'Noto Sans KR';
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
@@ -389,7 +389,7 @@ const clickKakaoShare = () => {
     width: 100%;
     text-align: center;
 
-    font-family: 'Noto Sans';
+    font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 300;
     font-size: 12px;

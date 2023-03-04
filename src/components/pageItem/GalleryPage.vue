@@ -61,6 +61,7 @@ const galleryRef = ref(null);
     top: 130px;
     width: calc(100% - 40px);
     aspect-ratio: 1 / 1.5;
+    max-height: 70%;
     margin: 0 20px;
     padding-bottom: 35px;
   }
@@ -69,7 +70,8 @@ const galleryRef = ref(null);
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: scale-down;
+    object-fit: cover;
+    object-position: center;
   }
 }
 </style>
