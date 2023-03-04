@@ -36,7 +36,9 @@ const clickLinkCopy = async () => {
 const clickKakaoShare = () => {
   // eslint-disable-next-line no-undef
   Kakao.Share.sendDefault({
-    objectType: 'feed',
+    objectType: 'location',
+    address: '서울 강남구 봉은사로 130',
+    addressTitle: '노보텔 앰배서더 서울 강남',
     content: {
       title: '이수현 & 박인영 결혼합니다',
       description: `5월 28일 일요일 오후 2시

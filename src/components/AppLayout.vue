@@ -107,6 +107,10 @@ const onSlideChange = () => {
     </div>
 
     <swiper-slide class="swiperSlide">
+      <RegardsPage />
+    </swiper-slide>
+
+    <swiper-slide class="swiperSlide">
       <AppCover @down-arrow-click="swipeDown" />
     </swiper-slide>
 
