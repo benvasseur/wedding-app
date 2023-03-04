@@ -74,7 +74,10 @@ const particleOptions = {
     />
 
     <div class="gettingMarriedText">
-      <img :src="gettingMarried" alt="married" />
+      <v-img
+        :src="gettingMarried"
+        :width="153"
+      />
     </div>
 
     <div class="coverTitle">
@@ -88,7 +91,10 @@ const particleOptions = {
       </div>
 
       <div class="logo">
-        <img :src="flower" alt="flower" />
+        <v-img
+          :src="flower"
+          :width="120"
+        />
       </div>
 
       <div class="name">
@@ -107,7 +113,10 @@ const particleOptions = {
       class="arrowDown"
       @click="$emit('downArrowClick')"
     >
-      <img :src="arrowDown" alt="arrow" />
+      <v-img
+        :src="arrowDown"
+        :width="48"
+      />
     </div>
   </div>
 </template>

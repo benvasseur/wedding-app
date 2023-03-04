@@ -1,17 +1,23 @@
 <script setup>
 import invitation from '@/assets/texts/invitation.svg';
-import rings from '@/assets/images/rings.png';
+import rings from '@/assets/images/rings.jpg';
 
 </script>
 
 <template>
   <div id="invitationPage">
     <div class="invitation">
-      <img :src="invitation" alt="invitation" />
+      <v-img
+        :src="invitation"
+        :width="121"
+      />
     </div>
 
     <div class="rings">
-      <img :src="rings" alt="rings" />
+      <v-img
+        :src="rings"
+        :width="160"
+      />
     </div>
 
     <div class="description">

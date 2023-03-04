@@ -13,7 +13,11 @@ const galleryRef = ref(null);
 <template>
   <div id="galleryPage">
     <div class="galleryText">
-      <img :src="gallery" alt="gallery" />
+      <!-- <img :src="gallery" alt="gallery" /> -->
+      <v-img
+        :src="gallery"
+        :width="92"
+      />
     </div>
 
     <swiper-container
@@ -25,16 +29,42 @@ const galleryRef = ref(null);
       :loop="true"
       :space-between="20"
     >
-      <swiper-slide class="swiperSlide">
+      <!-- <IMG> style -->
+      <!-- <swiper-slide class="swiperSlide">
         <img :src="coverImage" alt="image" />
-      </swiper-slide>
+      </swiper-slide> -->
 
-      <swiper-slide class="swiperSlide">
+      <!-- <swiper-slide class="swiperSlide">
         <img :src="coverImage2" alt="image" />
+      </swiper-slide> -->
+
+      <!-- <swiper-slide class="swiperSlide">
+        <img :src="ParkInyoung" alt="image" />
+      </swiper-slide> -->
+
+      <!-- <V-IMG> style-->
+      <swiper-slide class="swiperSlide">
+        <v-img
+          :src="coverImage"
+          height="100%"
+          cover
+        />
       </swiper-slide>
 
       <swiper-slide class="swiperSlide">
-        <img :src="ParkInyoung" alt="image" />
+        <v-img
+          :src="coverImage2"
+          height="100%"
+          cover
+        />
+      </swiper-slide>
+
+      <swiper-slide class="swiperSlide">
+        <v-img
+          :src="ParkInyoung"
+          height="100%"
+          cover
+        />
       </swiper-slide>
     </swiper-container>
   </div>
@@ -66,12 +96,18 @@ const galleryRef = ref(null);
     padding-bottom: 35px;
   }
 
-  swiper-slide img {
+  /* <IMG> style */
+  /* swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+  } */
+
+  /* <V-IMG> style */
+  swiper-slide {
+    height: 100%;
   }
 }
 </style>

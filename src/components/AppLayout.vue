@@ -8,9 +8,9 @@ import AppCover from './pageItem/AppCover.vue';
 import DatePage from './pageItem/DatePage.vue';
 import BridePage from './pageItem/BridePage.vue';
 import GroomPage from './pageItem/GroomPage.vue';
-import Invitation from './pageItem/InvitationPage.vue';
-import Location from './pageItem/LocationPage.vue';
-import Gallery from './pageItem/GalleryPage.vue';
+import InvitationPage from './pageItem/InvitationPage.vue';
+import LocationPage from './pageItem/LocationPage.vue';
+import GalleryPage from './pageItem/GalleryPage.vue';
 import RegardsPage from './pageItem/RegardsPage.vue';
 
 import location from '@/assets/images/location.svg';
@@ -123,15 +123,15 @@ const onSlideChange = () => {
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <Invitation />
+      <InvitationPage />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <Location :is-visible="state.activeSlide === 6" />
+      <LocationPage :is-visible="state.activeSlide === 6" />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
-      <Gallery />
+      <GalleryPage />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">

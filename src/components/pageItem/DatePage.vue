@@ -6,7 +6,10 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
 <template>
   <div id="saveTheDatePage">
     <div class="saveTheDate">
-      <img :src="saveTheDate" alt="date" />
+      <v-img
+        :src="saveTheDate"
+        :width="150"
+      />
     </div>
 
     <div class="date">

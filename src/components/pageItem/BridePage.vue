@@ -7,7 +7,10 @@ import bride from '@/assets/texts/bride.svg';
     <div class="portrait" />
 
     <div class="brideText">
-      <img :src="bride" alt="bride" />
+      <v-img
+        :src="bride"
+        :width="63"
+      />
     </div>
 
     <div class="name">

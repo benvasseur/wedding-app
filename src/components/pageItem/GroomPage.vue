@@ -7,7 +7,10 @@ import groom from '@/assets/texts/groom.svg';
     <div class="portrait" />
 
     <div class="groomText">
-      <img :src="groom" alt="groom" />
+      <v-img
+        :src="groom"
+        :width="73"
+      />
     </div>
 
     <div class="name">

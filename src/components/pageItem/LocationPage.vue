@@ -54,7 +54,10 @@ watch(() => props.isVisible, (isVisible) => {
 <template>
   <div id="locationPage">
     <div class="location">
-      <img :src="location" alt="location" />
+      <v-img
+        :src="location"
+        :width="105"
+      />
     </div>
 
     <div class="description1">

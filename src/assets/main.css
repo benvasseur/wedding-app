@@ -84,3 +84,8 @@ button.roundButton {
 .v-expansion-panel:not(:first-child)::after {
   border-top-style: hidden;
 }
+
+/* vuetify image */
+.v-responsive.v-img {
+  margin: 0 auto;
+}
