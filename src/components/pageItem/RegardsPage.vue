@@ -18,18 +18,18 @@ const toaster = createToaster({
 const clickBankCopy = async (accountNumber) => {
   try {
     await toClipboard(`${accountNumber}`);
-    toaster.success('copied!');
+    toaster.success('계좌번호가 복사됐어요');
   } catch (e) {
-    toaster.error('something went wrong!');
+    toaster.error('복사를 실패했어요<br/>다시 시도해 주세요');
   }
 };
 
 const clickLinkCopy = async () => {
   try {
     await toClipboard(`${window.location.origin}`);
-    toaster.success('copied!');
+    toaster.success('청첩장 링크가 복사됐어요');
   } catch (e) {
-    toaster.error('something went wrong!');
+    toaster.error('복사를 실패했어요<br/>다시 시도해 주세요');
   }
 };
 
