@@ -178,7 +178,7 @@ const particleOptions = {
 .arrowDown {
   z-index: 20;
   position: absolute;
-  bottom: 40px;
+  bottom: 28px;
   margin: 0 auto;
   left: 0;
   right: 0;
