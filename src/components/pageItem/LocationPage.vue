@@ -1,6 +1,6 @@
 <!-- eslint-disable no-undef -->
 <script setup>
-import { onMounted, watch } from 'vue';
+import { watch } from 'vue';
 import location from '@/assets/texts/location.svg';
 import subway from '@/assets/texts/subway.svg';
 
