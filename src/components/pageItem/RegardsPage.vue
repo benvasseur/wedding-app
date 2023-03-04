@@ -1,12 +1,27 @@
 <script setup>
+import { createToaster } from '@meforma/vue-toaster';
+import useClipboard from 'vue-clipboard3';
 import regards from '@/assets/texts/regards.svg';
 import rings from '@/assets/images/rings.png';
 import copy from '@/assets/images/contentCopy.svg';
 import kakao from '@/assets/images/kakao.svg';
 import link from '@/assets/images/link.svg';
 
-const clickBankCopy = () => {
-  navigator.clipboard.writeText('1002945123456');
+const { toClipboard } = useClipboard();
+
+const toaster = createToaster({
+  position: 'top',
+  duration: 2000,
+  maxToasts: 3,
+});
+
+const clickBankCopy = async (accountNumber) => {
+  try {
+    await toClipboard(`${accountNumber}`);
+    toaster.success('copied!');
+  } catch (e) {
+    toaster.error('something went wrong!');
+  }
 };
 
 const clickLinkCopy = () => {
@@ -39,7 +54,6 @@ const clickKakaoShare = () => {
     ],
   });
 };
-
 </script>
 
 <template>
@@ -62,10 +76,10 @@ const clickKakaoShare = () => {
           <div class="accContent">
             <div class="blockLeft">
               <div class="personInfo">
-                이성화 (신랑 아버지)
+                이수현
               </div>
               <div class="bankInfo">
-                n은행 0000-000-000000
+                농협 352-0510-2397-43
               </div>
             </div>
 
@@ -75,7 +89,7 @@ const clickKakaoShare = () => {
                 class="copyButton"
                 width="74px"
                 max-width="74px"
-                @click="clickBankCopy"
+                @click=" clickBankCopy(3520510239743)"
               >
                 <template #prepend>
                   <img :src="copy" alt="copy" />
@@ -90,10 +104,10 @@ const clickKakaoShare = () => {
           <div class="accContent">
             <div class="blockLeft">
               <div class="personInfo">
-                이수현 신랑
+                이성화 (신랑 아버지)
               </div>
               <div class="bankInfo">
-                n은행 0000-000-000000
+                농협 352-1037-5190-83
               </div>
             </div>
 
@@ -103,7 +117,35 @@ const clickKakaoShare = () => {
                 class="copyButton"
                 width="74px"
                 max-width="74px"
-                @click="clickBankCopy"
+                @click="clickBankCopy(3521037519083)"
+              >
+                <template #prepend>
+                  <img :src="copy" alt="copy" />
+                </template>
+                복사
+              </v-btn>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="accContent">
+            <div class="blockLeft">
+              <div class="personInfo">
+                정신숙 (신랑 어머니)
+              </div>
+              <div class="bankInfo">
+                농협 352-1264-4478-63
+              </div>
+            </div>
+
+            <div class="blockRight">
+              <v-btn
+                rounded
+                class="copyButton"
+                width="74px"
+                max-width="74px"
+                @click="clickBankCopy(3521264447863)"
               >
                 <template #prepend>
                   <img :src="copy" alt="copy" />
@@ -117,17 +159,17 @@ const clickKakaoShare = () => {
 
       <v-expansion-panel>
         <template #title>
-          신랑측 계좌번호
+          신부측 계좌번호
         </template>
 
         <template #text>
           <div class="accContent">
             <div class="blockLeft">
               <div class="personInfo">
-                이성화 (신랑 아버지)
+                박인영
               </div>
               <div class="bankInfo">
-                n은행 0000-000-000000
+                우리은행 1002-250-337875
               </div>
             </div>
 
@@ -137,7 +179,7 @@ const clickKakaoShare = () => {
                 class="copyButton"
                 width="74px"
                 max-width="74px"
-                @click="clickBankCopy"
+                @click=" clickBankCopy(1002250337875)"
               >
                 <template #prepend>
                   <img :src="copy" alt="copy" />
@@ -152,10 +194,10 @@ const clickKakaoShare = () => {
           <div class="accContent">
             <div class="blockLeft">
               <div class="personInfo">
-                이수현 신랑
+                김윤희(신부 어머니)
               </div>
               <div class="bankInfo">
-                n은행 0000-000-000000
+                씨티은행 303-01890-264
               </div>
             </div>
 
@@ -165,7 +207,7 @@ const clickKakaoShare = () => {
                 class="copyButton"
                 width="74px"
                 max-width="74px"
-                @click="clickBankCopy"
+                @click="clickBankCopy(30301890264)"
               >
                 <template #prepend>
                   <img :src="copy" alt="copy" />
