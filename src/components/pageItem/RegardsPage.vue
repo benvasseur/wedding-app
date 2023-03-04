@@ -24,8 +24,13 @@ const clickBankCopy = async (accountNumber) => {
   }
 };
 
-const clickLinkCopy = () => {
-  navigator.clipboard.writeText(window.location.origin);
+const clickLinkCopy = async () => {
+  try {
+    await toClipboard(`${window.location.origin}`);
+    toaster.success('copied!');
+  } catch (e) {
+    toaster.error('something went wrong!');
+  }
 };
 
 const clickKakaoShare = () => {
