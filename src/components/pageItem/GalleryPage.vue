@@ -19,7 +19,6 @@ const galleryRef = ref(null);
       />
     </div>
 
-    <!-- <div class="wrapper"> -->
     <swiper-container
       ref="galleryRef"
       class="gallery"
@@ -50,7 +49,6 @@ const galleryRef = ref(null);
         />
       </swiper-slide>
     </swiper-container>
-    <!-- </div> -->
   </div>
 </template>
 
@@ -75,25 +73,8 @@ const galleryRef = ref(null);
     top: 130px;
     width: calc(100% - 40px);
     height: 70%;
-    /* max-height: 70%; */
     margin: 0 20px;
     padding-bottom: 35px;
-
-    /* aspect-ratio: 1 / 1.5;
-    // Fallback
-    @supports not (aspect-ratio: 1 / 1.5) {
-      &::before {
-        float: left;
-        padding-top: 150%;
-        content: "";
-      }
-
-      &::after {
-        display: block;
-        content: "";
-        clear: both;
-      }
-    } */
   }
 
   swiper-slide {
