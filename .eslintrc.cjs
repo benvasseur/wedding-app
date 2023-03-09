@@ -11,5 +11,6 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'off',
     'vuejs-accessibility/click-events-have-key-events': 'off',
+    'vuejs-accessibility/anchor-has-content': 'off',
   },
 };

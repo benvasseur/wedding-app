@@ -17,7 +17,7 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
     </div>
 
     <div class="subDate">
-      Sunday at 2 p.m.
+      Sunday at 12 p.m.
     </div>
 
     <div class="description">
