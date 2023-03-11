@@ -2,28 +2,29 @@
 import { ref, onMounted } from 'vue';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipe from 'photoswipe';
+import ObjectPosition from '@vovayatsyuk/photoswipe-object-position';
 import gallery from '@/assets/texts/gallery.svg';
 import 'photoswipe/style.css';
 
-import gallery1 from '@/assets/images/gallery/gallery1.jpeg';
-import gallery2 from '@/assets/images/gallery/gallery2.jpeg';
-import gallery3 from '@/assets/images/gallery/gallery3.jpeg';
-import gallery4 from '@/assets/images/gallery/gallery4.jpeg';
-import gallery5 from '@/assets/images/gallery/gallery5.jpeg';
-import gallery6 from '@/assets/images/gallery/gallery6.jpeg';
-import gallery7 from '@/assets/images/gallery/gallery7.jpeg';
-import gallery8 from '@/assets/images/gallery/gallery8.jpeg';
-import gallery9 from '@/assets/images/gallery/gallery9.jpeg';
-import gallery10 from '@/assets/images/gallery/gallery10.jpeg';
-import gallery11 from '@/assets/images/gallery/gallery11.jpeg';
-import gallery12 from '@/assets/images/gallery/gallery12.jpeg';
-import gallery13 from '@/assets/images/gallery/gallery13.jpeg';
-import gallery14 from '@/assets/images/gallery/gallery14.jpeg';
-import gallery15 from '@/assets/images/gallery/gallery15.jpeg';
+import gallery1 from '@/assets/images/gallery/gallery1.jpg';
+import gallery2 from '@/assets/images/gallery/gallery2.jpg';
+import gallery3 from '@/assets/images/gallery/gallery3.jpg';
+import gallery4 from '@/assets/images/gallery/gallery4.jpg';
+import gallery5 from '@/assets/images/gallery/gallery5.jpg';
+import gallery6 from '@/assets/images/gallery/gallery6.jpg';
+import gallery7 from '@/assets/images/gallery/gallery7.jpg';
+import gallery8 from '@/assets/images/gallery/gallery8.jpg';
+import gallery9 from '@/assets/images/gallery/gallery9.jpg';
+import gallery10 from '@/assets/images/gallery/gallery10.jpg';
+import gallery11 from '@/assets/images/gallery/gallery11.jpg';
+import gallery12 from '@/assets/images/gallery/gallery12.jpg';
+import gallery13 from '@/assets/images/gallery/gallery13.jpg';
+import gallery14 from '@/assets/images/gallery/gallery14.jpg';
+import gallery15 from '@/assets/images/gallery/gallery15.jpg';
 
-import gallery1Thumbnail from '@/assets/images/gallery/gallery1Thumbnail.jpeg';
-import gallery2Thumbnail from '@/assets/images/gallery/gallery2Thumbnail.jpeg';
-import gallery3Thumbnail from '@/assets/images/gallery/gallery3Thumbnail.jpeg';
+import gallery1Thumbnail from '@/assets/images/gallery/gallery1Thumbnail.jpg';
+import gallery2Thumbnail from '@/assets/images/gallery/gallery2Thumbnail.jpg';
+import gallery3Thumbnail from '@/assets/images/gallery/gallery3Thumbnail.jpg';
 import gallery4Thumbnail from '@/assets/images/gallery/gallery4Thumbnail.jpeg';
 import gallery5Thumbnail from '@/assets/images/gallery/gallery5Thumbnail.jpeg';
 import gallery6Thumbnail from '@/assets/images/gallery/gallery6Thumbnail.jpeg';
@@ -42,22 +43,22 @@ const items = [
     id: 1,
     src: gallery1,
     thumbnail: gallery1Thumbnail,
-    width: 3648,
-    height: 5472,
+    width: 1080,
+    height: 1620,
   },
   {
     id: 2,
     src: gallery2,
     thumbnail: gallery2Thumbnail,
-    width: 3537,
-    height: 5305,
+    width: 1080,
+    height: 1620,
   },
   {
     id: 3,
     src: gallery3,
     thumbnail: gallery3Thumbnail,
-    width: 3648,
-    height: 5472,
+    width: 1080,
+    height: 1620,
   },
   {
     id: 4,
@@ -154,6 +155,8 @@ const lightboxOptions = {
 
 onMounted(() => {
   const lightbox = new PhotoSwipeLightbox(lightboxOptions);
+  // eslint-disable-next-line no-unused-vars
+  const objectPosition = new ObjectPosition(lightbox);
   lightbox.init();
 });
 
@@ -192,8 +195,14 @@ onMounted(() => {
                 :data-pswp-height="image.height"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cropped="true"
               >
-                <v-img :src="image.thumbnail" />
+                <v-img
+                  eager
+                  :src="image.thumbnail"
+                  :aspect-ratio="1"
+                  cover
+                />
               </a>
             </v-col>
           </v-row>
@@ -214,8 +223,14 @@ onMounted(() => {
                 :data-pswp-height="image.height"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cropped="true"
               >
-                <v-img :src="image.thumbnail" />
+                <v-img
+                  eager
+                  :src="image.thumbnail"
+                  :aspect-ratio="1"
+                  cover
+                />
               </a>
             </v-col>
           </v-row>

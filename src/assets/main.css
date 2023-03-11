@@ -89,3 +89,7 @@ button.roundButton {
 .v-responsive.v-img {
   margin: 0 auto;
 }
+
+.v-img__img--cover {
+  object-position: top;
+}
