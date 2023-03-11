@@ -66,7 +66,7 @@ import rings from '@/assets/images/rings.jpg';
     font-family: 'Noto Serif KR';
     font-style: normal;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 200%;
 
     text-align: center;
