@@ -36,7 +36,7 @@ import groom from '@/assets/texts/groom.svg';
   .portrait {
     width: 100%;
 
-    background-image: url('@/assets/images/LeeSuhyun.png');
+    background-image: url('@/assets/images/LeeSuhyun.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

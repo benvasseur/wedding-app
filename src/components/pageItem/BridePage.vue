@@ -36,10 +36,10 @@ import bride from '@/assets/texts/bride.svg';
   .portrait {
     width: 100%;
 
-    background-image: url('@/assets/images/ParkInyoung.png');
+    background-image: url('@/assets/images/ParkInyoung.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
 
     top: 150px;
 
