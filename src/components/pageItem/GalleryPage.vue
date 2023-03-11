@@ -141,7 +141,7 @@ onUnmounted(() => {
     >
       <swiper-slide class="swiperSlide">
         <v-container class="inSlideContainer">
-          <v-row>
+          <v-row dense>
             <v-col
               v-for="image in items.slice(0, 9)"
               :key="image.id"
