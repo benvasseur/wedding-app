@@ -21,7 +21,7 @@ import saveTheDate from '@/assets/texts/saveTheDate.svg';
     </div>
 
     <div class="description">
-      <p>2023.05.28 일요일 낮 2시</p>
+      <p>2023.05.28 일요일 낮 12시</p>
       <p>강남 노보텔 앰배서더<br />2층 샴페인홀</p>
     </div>
   </div>
