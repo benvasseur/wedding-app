@@ -75,6 +75,7 @@ const clickKakaoShare = () => {
 
     <div class="cake">
       <v-img
+        eager
         :transition="'none'"
         :src="cake"
         :width="120"
