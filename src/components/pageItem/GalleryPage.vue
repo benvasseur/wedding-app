@@ -1,12 +1,9 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipe from 'photoswipe';
 import gallery from '@/assets/texts/gallery.svg';
 import 'photoswipe/style.css';
-
-import coverImage from '@/assets/images/coverImage.png';
-import coverImageThumbnail from '@/assets/images/coverImage_thumbnail_500x500.jpg';
 
 import gallery1 from '@/assets/images/gallery/gallery1.jpeg';
 import gallery2 from '@/assets/images/gallery/gallery2.jpeg';
@@ -24,109 +21,125 @@ import gallery13 from '@/assets/images/gallery/gallery13.jpeg';
 import gallery14 from '@/assets/images/gallery/gallery14.jpeg';
 import gallery15 from '@/assets/images/gallery/gallery15.jpeg';
 
+import gallery1Thumbnail from '@/assets/images/gallery/gallery1Thumbnail.jpeg';
+import gallery2Thumbnail from '@/assets/images/gallery/gallery2Thumbnail.jpeg';
+import gallery3Thumbnail from '@/assets/images/gallery/gallery3Thumbnail.jpeg';
+import gallery4Thumbnail from '@/assets/images/gallery/gallery4Thumbnail.jpeg';
+import gallery5Thumbnail from '@/assets/images/gallery/gallery5Thumbnail.jpeg';
+import gallery6Thumbnail from '@/assets/images/gallery/gallery6Thumbnail.jpeg';
+import gallery7Thumbnail from '@/assets/images/gallery/gallery7Thumbnail.jpeg';
+import gallery8Thumbnail from '@/assets/images/gallery/gallery8Thumbnail.jpeg';
+import gallery9Thumbnail from '@/assets/images/gallery/gallery9Thumbnail.jpeg';
+import gallery10Thumbnail from '@/assets/images/gallery/gallery10Thumbnail.jpeg';
+import gallery11Thumbnail from '@/assets/images/gallery/gallery11Thumbnail.jpeg';
+import gallery12Thumbnail from '@/assets/images/gallery/gallery12Thumbnail.jpeg';
+import gallery13Thumbnail from '@/assets/images/gallery/gallery13Thumbnail.jpeg';
+import gallery14Thumbnail from '@/assets/images/gallery/gallery14Thumbnail.jpeg';
+import gallery15Thumbnail from '@/assets/images/gallery/gallery15Thumbnail.jpeg';
+
 const items = [
   {
     id: 1,
     src: gallery1,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery1Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 2,
     src: gallery2,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery2Thumbnail,
     width: 3537,
     height: 5305,
   },
   {
     id: 3,
     src: gallery3,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery3Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 4,
     src: gallery4,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery4Thumbnail,
     width: 5472,
     height: 3648,
   },
   {
     id: 5,
     src: gallery5,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery5Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 6,
     src: gallery6,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery6Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 7,
     src: gallery7,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery7Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 8,
     src: gallery8,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery8Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 9,
     src: gallery9,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery9Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 10,
     src: gallery10,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery10Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 11,
     src: gallery11,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery11Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 12,
     src: gallery12,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery12Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 13,
     src: gallery13,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery13Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 14,
     src: gallery14,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery14Thumbnail,
     width: 3648,
     height: 5472,
   },
   {
     id: 15,
     src: gallery15,
-    thumbnail: coverImageThumbnail,
+    thumbnail: gallery15Thumbnail,
     width: 3648,
     height: 5472,
   },
@@ -189,7 +202,7 @@ onMounted(() => {
 
       <swiper-slide class="swiperSlide">
         <v-container class="inSlideContainer">
-          <v-row>
+          <v-row dense>
             <v-col
               v-for="image in items.slice(9, 15)"
               :key="image.id"
