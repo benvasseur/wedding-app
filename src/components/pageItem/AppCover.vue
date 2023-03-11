@@ -125,17 +125,9 @@ const particleOptions = {
   width: 100%;
   text-align: center;
 
-  /* background-image: url('@/assets/images/coverImage.png'); */
   background-image: url('@/assets/images/coverImage4.jpeg');
   background-color: var(--color-background-beige);
   background-repeat: no-repeat;
-  /* background-position-x: 45%;
-  background-position-y: 70%;
-  background-size: 120%; */
-  /* background-position-x: 38%;
-  background-position-y: 0; */
-  /* background-size: contain; */
-
   background-size: cover;
   background-position-x: 50%;
   background-position-y: calc(70% - 100px);
