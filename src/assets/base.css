@@ -84,7 +84,7 @@ body {
 }
 
 @media (max-height: 650px) {
-  .swiperSlide>div {
+  .swiperSlide>div:not(#invitationPage) {
     zoom: 75%;
   }
 
