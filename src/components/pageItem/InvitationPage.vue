@@ -15,6 +15,7 @@ import rings from '@/assets/images/rings.jpg';
 
     <div class="rings">
       <v-img
+        :transition="'none'"
         :src="rings"
         :width="160"
       />

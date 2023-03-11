@@ -90,6 +90,8 @@ const particleOptions = {
 
       <div class="logo">
         <v-img
+          eager
+          :transition="'none'"
           :src="flower"
           :width="120"
         />
