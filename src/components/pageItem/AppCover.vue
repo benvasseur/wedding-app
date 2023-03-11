@@ -131,10 +131,15 @@ const particleOptions = {
   background-repeat: no-repeat;
   /* background-position-x: 45%;
   background-position-y: 70%;
-  background-size: 260%; */
-  background-position-x: 38%;
-  background-position-y: 0;
-  background-size: 138%;
+  background-size: 120%; */
+  /* background-position-x: 38%;
+  background-position-y: 0; */
+  /* background-size: contain; */
+
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: calc(70% - 100px);
+
 }
 
 #tsparticles {
