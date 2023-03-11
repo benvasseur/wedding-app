@@ -85,6 +85,6 @@ body {
 
 @media (max-height: 650px) {
   .swiperSlide>div {
-    zoom: 75%;
+    zoom: 80%;
   }
 }

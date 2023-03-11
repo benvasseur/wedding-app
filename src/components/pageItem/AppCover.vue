@@ -126,12 +126,15 @@ const particleOptions = {
   text-align: center;
 
   /* background-image: url('@/assets/images/coverImage.png'); */
-  background-image: url('@/assets/images/coverImage3.jpeg');
+  background-image: url('@/assets/images/coverImage4.jpeg');
   background-color: var(--color-background-beige);
   background-repeat: no-repeat;
-  background-position-x: 45%;
+  /* background-position-x: 45%;
   background-position-y: 70%;
-  background-size: 260%;
+  background-size: 260%; */
+  background-position-x: 38%;
+  background-position-y: 0;
+  background-size: 138%;
 }
 
 #tsparticles {
