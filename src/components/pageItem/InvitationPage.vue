@@ -24,7 +24,8 @@ import rings from '@/assets/images/rings.jpg';
       그대를 만난건<br />
       내게 얼마나 행운이었나<br />
       그대 생각 내게 머물므로<br />
-      나의 세상은 빛나는 세상이 됩니다<br /><br />
+      나의 세상은 빛나는 세상이 됩니다
+      <hr>
       함께해 온 일곱 번째 봄,<br />
       따스한 사랑으로 약속의 꽃을 피우려 합니다.<br />
       저희의 동행을 축복해주시면<br />
@@ -67,6 +68,13 @@ import rings from '@/assets/images/rings.jpg';
     line-height: 200%;
 
     text-align: center;
+
+    hr {
+      margin: 24px auto;
+      width: 80px;
+      border: 0;
+      border-top: 1px solid var(--color-text-beige);
+    }
   }
 }
 </style>
