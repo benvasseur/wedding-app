@@ -114,6 +114,10 @@ const onTransitionEnd = (event) => {
     </div>
 
     <swiper-slide class="swiperSlide">
+      <GalleryPage />
+    </swiper-slide>
+
+    <swiper-slide class="swiperSlide">
       <AppCover @down-arrow-click="swipeDown" />
     </swiper-slide>
 

@@ -8,97 +8,127 @@ import 'photoswipe/style.css';
 import coverImage from '@/assets/images/coverImage.png';
 import coverImageThumbnail from '@/assets/images/coverImage_thumbnail_500x500.jpg';
 
+import gallery1 from '@/assets/images/gallery/gallery1.jpeg';
+import gallery2 from '@/assets/images/gallery/gallery2.jpeg';
+import gallery3 from '@/assets/images/gallery/gallery3.jpeg';
+import gallery4 from '@/assets/images/gallery/gallery4.jpeg';
+import gallery5 from '@/assets/images/gallery/gallery5.jpeg';
+import gallery6 from '@/assets/images/gallery/gallery6.jpeg';
+import gallery7 from '@/assets/images/gallery/gallery7.jpeg';
+import gallery8 from '@/assets/images/gallery/gallery8.jpeg';
+import gallery9 from '@/assets/images/gallery/gallery9.jpeg';
+import gallery10 from '@/assets/images/gallery/gallery10.jpeg';
+import gallery11 from '@/assets/images/gallery/gallery11.jpeg';
+import gallery12 from '@/assets/images/gallery/gallery12.jpeg';
+import gallery13 from '@/assets/images/gallery/gallery13.jpeg';
+import gallery14 from '@/assets/images/gallery/gallery14.jpeg';
+import gallery15 from '@/assets/images/gallery/gallery15.jpeg';
+
 const items = [
   {
     id: 1,
-    src: coverImage,
+    src: gallery1,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 2,
-    src: coverImage,
+    src: gallery2,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3537,
+    height: 5305,
   },
   {
     id: 3,
-    src: coverImage,
+    src: gallery3,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 4,
-    src: coverImage,
+    src: gallery4,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 5472,
+    height: 3648,
   },
   {
     id: 5,
-    src: coverImage,
+    src: gallery5,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 6,
-    src: coverImage,
+    src: gallery6,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 7,
-    src: coverImage,
+    src: gallery7,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
+  },
+  {
+    id: 8,
+    src: gallery8,
+    thumbnail: coverImageThumbnail,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 9,
-    src: coverImage,
+    src: gallery9,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 10,
-    src: coverImage,
+    src: gallery10,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 11,
-    src: coverImage,
+    src: gallery11,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 12,
-    src: coverImage,
+    src: gallery12,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 13,
-    src: coverImage,
+    src: gallery13,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
   },
   {
     id: 14,
-    src: coverImage,
+    src: gallery14,
     thumbnail: coverImageThumbnail,
-    width: 375,
-    height: 578,
+    width: 3648,
+    height: 5472,
+  },
+  {
+    id: 15,
+    src: gallery15,
+    thumbnail: coverImageThumbnail,
+    width: 3648,
+    height: 5472,
   },
 ];
 
@@ -112,10 +142,6 @@ const lightboxOptions = {
 onMounted(() => {
   const lightbox = new PhotoSwipeLightbox(lightboxOptions);
   lightbox.init();
-});
-
-onUnmounted(() => {
-  // galleryRef.value.destroy();
 });
 
 </script>
@@ -165,7 +191,7 @@ onUnmounted(() => {
         <v-container class="inSlideContainer">
           <v-row>
             <v-col
-              v-for="image in items.slice(9, 13)"
+              v-for="image in items.slice(9, 15)"
               :key="image.id"
               cols="4"
             >
