@@ -72,7 +72,7 @@ const items = [
     id: 5,
     src: gallery5,
     thumbnail: gallery5Thumbnail,
-    thumbnailPosition: 'center',
+    thumbnailPosition: 'bottom',
     width: 1080,
     height: 1620,
   },
