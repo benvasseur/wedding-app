@@ -118,7 +118,7 @@ const clickKakaoShare = () => {
           <div class="accContent">
             <div class="blockLeft">
               <div class="personInfo">
-                이성화 (신랑 아버지)
+                이성화
               </div>
               <div class="bankInfo">
                 농협 352-1037-5190-83
@@ -146,7 +146,7 @@ const clickKakaoShare = () => {
           <div class="accContent">
             <div class="blockLeft">
               <div class="personInfo">
-                정신숙 (신랑 어머니)
+                정신숙
               </div>
               <div class="bankInfo">
                 농협 352-1264-4478-63
@@ -208,7 +208,7 @@ const clickKakaoShare = () => {
           <div class="accContent">
             <div class="blockLeft">
               <div class="personInfo">
-                김윤희(신부 어머니)
+                김윤희
               </div>
               <div class="bankInfo">
                 씨티은행 303-01890-264
