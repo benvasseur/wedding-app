@@ -25,18 +25,18 @@ import gallery15 from '@/assets/images/gallery/gallery15.jpg';
 import gallery1Thumbnail from '@/assets/images/gallery/gallery1Thumbnail.jpg';
 import gallery2Thumbnail from '@/assets/images/gallery/gallery2Thumbnail.jpg';
 import gallery3Thumbnail from '@/assets/images/gallery/gallery3Thumbnail.jpg';
-import gallery4Thumbnail from '@/assets/images/gallery/gallery4Thumbnail.jpeg';
-import gallery5Thumbnail from '@/assets/images/gallery/gallery5Thumbnail.jpeg';
-import gallery6Thumbnail from '@/assets/images/gallery/gallery6Thumbnail.jpeg';
-import gallery7Thumbnail from '@/assets/images/gallery/gallery7Thumbnail.jpeg';
-import gallery8Thumbnail from '@/assets/images/gallery/gallery8Thumbnail.jpeg';
-import gallery9Thumbnail from '@/assets/images/gallery/gallery9Thumbnail.jpeg';
-import gallery10Thumbnail from '@/assets/images/gallery/gallery10Thumbnail.jpeg';
-import gallery11Thumbnail from '@/assets/images/gallery/gallery11Thumbnail.jpeg';
-import gallery12Thumbnail from '@/assets/images/gallery/gallery12Thumbnail.jpeg';
-import gallery13Thumbnail from '@/assets/images/gallery/gallery13Thumbnail.jpeg';
-import gallery14Thumbnail from '@/assets/images/gallery/gallery14Thumbnail.jpeg';
-import gallery15Thumbnail from '@/assets/images/gallery/gallery15Thumbnail.jpeg';
+import gallery4Thumbnail from '@/assets/images/gallery/gallery4Thumbnail.jpg';
+import gallery5Thumbnail from '@/assets/images/gallery/gallery5Thumbnail.jpg';
+import gallery6Thumbnail from '@/assets/images/gallery/gallery6Thumbnail.jpg';
+import gallery7Thumbnail from '@/assets/images/gallery/gallery7Thumbnail.jpg';
+import gallery8Thumbnail from '@/assets/images/gallery/gallery8Thumbnail.jpg';
+import gallery9Thumbnail from '@/assets/images/gallery/gallery9Thumbnail.jpg';
+import gallery10Thumbnail from '@/assets/images/gallery/gallery10Thumbnail.jpg';
+import gallery11Thumbnail from '@/assets/images/gallery/gallery11Thumbnail.jpg';
+import gallery12Thumbnail from '@/assets/images/gallery/gallery12Thumbnail.jpg';
+import gallery13Thumbnail from '@/assets/images/gallery/gallery13Thumbnail.jpg';
+import gallery14Thumbnail from '@/assets/images/gallery/gallery14Thumbnail.jpg';
+import gallery15Thumbnail from '@/assets/images/gallery/gallery15Thumbnail.jpg';
 
 const items = [
   {
@@ -64,6 +64,7 @@ const items = [
     id: 4,
     src: gallery4,
     thumbnail: gallery4Thumbnail,
+    thumbnailPosition: 'center',
     width: 1080,
     height: 1620,
   },
@@ -71,6 +72,7 @@ const items = [
     id: 5,
     src: gallery5,
     thumbnail: gallery5Thumbnail,
+    thumbnailPosition: 'center',
     width: 1080,
     height: 1620,
   },
@@ -92,6 +94,7 @@ const items = [
     id: 8,
     src: gallery8,
     thumbnail: gallery8Thumbnail,
+    thumbnailPosition: 'center',
     width: 1080,
     height: 1620,
   },
@@ -113,6 +116,7 @@ const items = [
     id: 11,
     src: gallery11,
     thumbnail: gallery11Thumbnail,
+    thumbnailPosition: 'center',
     width: 1080,
     height: 1620,
   },
@@ -120,6 +124,7 @@ const items = [
     id: 12,
     src: gallery12,
     thumbnail: gallery12Thumbnail,
+    thumbnailPosition: 'center',
     width: 1080,
     height: 1620,
   },
@@ -141,6 +146,7 @@ const items = [
     id: 15,
     src: gallery15,
     thumbnail: gallery15Thumbnail,
+    thumbnailPosition: 'left',
     width: 1080,
     height: 720,
   },
@@ -198,6 +204,7 @@ onMounted(() => {
                 data-cropped="true"
               >
                 <v-img
+                  :class="image.thumbnailPosition ? `v-img-cover-position-${image.thumbnailPosition}` : 'v-img-cover-position-top'"
                   eager
                   :src="image.thumbnail"
                   :aspect-ratio="1"
@@ -226,6 +233,7 @@ onMounted(() => {
                 data-cropped="true"
               >
                 <v-img
+                  :class="image.thumbnailPosition ? `v-img-cover-position-${image.thumbnailPosition}` : 'v-img-cover-position-top'"
                   eager
                   :src="image.thumbnail"
                   :aspect-ratio="1"

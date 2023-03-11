@@ -90,6 +90,22 @@ button.roundButton {
   margin: 0 auto;
 }
 
-.v-img__img--cover {
+.v-img-cover-position-top .v-img__img--cover {
   object-position: top;
+}
+
+.v-img-cover-position-center .v-img__img--cover {
+  object-position: center;
+}
+
+.v-img-cover-position-bottom .v-img__img--cover {
+  object-position: bottom;
+}
+
+.v-img-cover-position-left .v-img__img--cover {
+  object-position: left;
+}
+
+.v-img-cover-position-right .v-img__img--cover {
+  object-position: right;
 }
