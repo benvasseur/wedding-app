@@ -44,19 +44,19 @@ const clickKakaoShare = () => {
       description: `5월 28일 일요일 오후 2시
 노보텔 앰배서더 강남`,
       imageUrl:
-          'https://wedding-inyoung.netlify.app/assets/coverImage3-4f9fb644.jpeg',
+          'https://suhyun-inyoung-wedding.netlify.app/assets/coverImage3-4f9fb644.jpeg',
       link: {
         // Must match the site domain registered in [My Application] > [Platform]
-        mobileWebUrl: 'https://wedding-inyoung.netlify.app',
-        webUrl: 'https://wedding-inyoung.netlify.app',
+        mobileWebUrl: 'https://suhyun-inyoung-wedding.netlify.app',
+        webUrl: 'https://suhyun-inyoung-wedding.netlify.app',
       },
     },
     buttons: [
       {
         title: '청첩장 보기',
         link: {
-          mobileWebUrl: 'https://wedding-inyoung.netlify.app',
-          webUrl: 'https://wedding-inyoung.netlify.app',
+          mobileWebUrl: 'https://suhyun-inyoung-wedding.netlify.app',
+          webUrl: 'https://suhyun-inyoung-wedding.netlify.app',
         },
       },
     ],
