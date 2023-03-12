@@ -14,6 +14,7 @@ import GalleryPage from './pageItem/GalleryPage.vue';
 import RegardsPage from './pageItem/RegardsPage.vue';
 
 import location from '@/assets/images/location.svg';
+import arrowDown from '@/assets/images/arrowDown.svg';
 
 register();
 
@@ -113,8 +114,19 @@ const onTransitionEnd = (event) => {
       </div>
     </div>
 
+    <div
+      v-if="state.activeSlide < state.totalSlide"
+      class="arrowDown"
+      @click="swipeDown"
+    >
+      <v-img
+        :src="arrowDown"
+        :width="48"
+      />
+    </div>
+
     <swiper-slide class="swiperSlide">
-      <AppCover @down-arrow-click="swipeDown" />
+      <AppCover />
     </swiper-slide>
 
     <swiper-slide class="swiperSlide">
@@ -183,5 +195,14 @@ const onTransitionEnd = (event) => {
   .left {
     margin-left: 12px;
   }
+}
+
+.arrowDown {
+  z-index: 20;
+  position: absolute;
+  bottom: 28px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 </style>

@@ -1,15 +1,12 @@
 <script setup>
 import { loadFull } from 'tsparticles';
 import flower from '@/assets/images/flower.png';
-import arrowDown from '@/assets/images/arrowDown.svg';
 import gettingMarried from '@/assets/texts/gettingMarried.svg';
 import petal1 from '@/assets/confetti/petal1.svg';
 import petal2 from '@/assets/confetti/petal2.svg';
 import petal3 from '@/assets/confetti/petal3.svg';
 import petal4 from '@/assets/confetti/petal4.svg';
 import petal5 from '@/assets/confetti/petal5.svg';
-
-defineEmits(['downArrowClick']);
 
 const particlesInit = async (engine) => {
   await loadFull(engine);
@@ -108,16 +105,6 @@ const particleOptions = {
     </div>
 
     <div class="titleWrapper" />
-
-    <div
-      class="arrowDown"
-      @click="$emit('downArrowClick')"
-    >
-      <v-img
-        :src="arrowDown"
-        :width="48"
-      />
-    </div>
   </div>
 </template>
 
@@ -182,14 +169,5 @@ const particleOptions = {
 
 .nameLatin {
   font-weight: bold;
-}
-
-.arrowDown {
-  z-index: 20;
-  position: absolute;
-  bottom: 28px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
 }
 </style>
