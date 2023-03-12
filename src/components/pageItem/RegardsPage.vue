@@ -261,7 +261,7 @@ const clickKakaoShare = () => {
     </div>
 
     <div class="legal">
-      ⓒ 2023 Choi & Seo All rights reserved.
+      ⓒ 2023 Choi & Seo
     </div>
   </div>
 </template>
