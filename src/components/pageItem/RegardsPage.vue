@@ -40,8 +40,8 @@ const clickKakaoShare = () => {
     address: '서울 강남구 봉은사로 130',
     addressTitle: '노보텔 앰배서더 서울 강남',
     content: {
-      title: '이수현 & 박인영 결혼합니다',
-      description: `5월 28일 일요일 오후 2시
+      title: '수현♡인영 결혼식에 초대합니다',
+      description: `5월 28일 일요일 오후 12시
 노보텔 앰배서더 강남`,
       imageUrl:
           'https://suhyun-inyoung-wedding.netlify.app/share.jpg',
