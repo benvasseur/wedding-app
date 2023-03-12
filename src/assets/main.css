@@ -109,3 +109,17 @@ button.roundButton {
 .v-img-cover-position-right .v-img__img--cover {
   object-position: right;
 }
+
+/* PhotoSwipe */
+.pswp--touch .pswp__button--arrow {
+  visibility: unset;
+}
+
+.pswp__button--arrow .pswp__icn-shadow {
+  stroke-width: 0;
+}
+
+.pswp__button--arrow #pswp__icn-arrow {
+  fill: rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
