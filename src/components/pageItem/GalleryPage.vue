@@ -207,7 +207,7 @@ onMounted(() => {
                 <v-img
                   :class="image.thumbnailPosition ? `v-img-cover-position-${image.thumbnailPosition}` : 'v-img-cover-position-top'"
                   eager
-                  :src="image.thumbnail"
+                  :src="image.src"
                   :aspect-ratio="1"
                   cover
                 />
@@ -236,7 +236,7 @@ onMounted(() => {
                 <v-img
                   :class="image.thumbnailPosition ? `v-img-cover-position-${image.thumbnailPosition}` : 'v-img-cover-position-top'"
                   eager
-                  :src="image.thumbnail"
+                  :src="image.src"
                   :aspect-ratio="1"
                   cover
                 />
