@@ -156,6 +156,7 @@ const lightboxOptions = {
   gallery: '#galleryPhotoSwipe',
   children: 'a',
   showHideAnimationType: 'zoom',
+  zoom: false,
   pswpModule: () => PhotoSwipe,
 };
 
